@@ -1,4 +1,4 @@
-// 1/1 => Kiíratás
+// Kiíratás
 // Ez egy 1 soros megjegyzés
 /* Ez egy több
 						soros
