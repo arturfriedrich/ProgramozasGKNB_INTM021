@@ -10,7 +10,7 @@ using namespace std;
 int main() {
   // cout << "\n\t Az élet értelme: 42!\n" << endl; // Literálok
 	cout << SZ << NK << FJ  << "\n" << endl;
-return 0;
+  return 0;
 }
 
 
