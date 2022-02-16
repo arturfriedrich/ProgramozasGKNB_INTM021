@@ -1,28 +1,45 @@
-// Konstansok/Literálok
+// Alap-operátorok, változó, while ciklus
 #include<iostream>
 
 #define NK 42
-#define FJ '!'
-#define SZ "\n\t Az élet értelme: "
+#define AP 2
+#define KT 10
 
 using namespace std;
 
 int main() {
-  // cout << "\n\t Az élet értelme: 42!\n" << endl; // Literálok
-	cout << SZ << NK << FJ  << "\n" << endl;
+    cout << "Összeg: " << NK + 2 << "\n" << "Különbség: " << NK - 2 << "\n" 
+	        << "Szorzat: " << NK * 2 << endl;
+    cout << "Hányados: " << NK / 2 << "\n" << "Maradék: " << NK % 2 << "\n" << endl;
+    int f_k=1, k_e=1;
+    while(f_k <= KT) {
+      cout << AP << "^" << f_k << ". hatványa: " << AP * k_e << endl;
+      f_k = f_k + 1;
+      k_e = AP * k_e;
+    }
   return 0;
 }
 
-
 /*
-JEGYZETEK:
-Konstansok:
-    - konstansokat a #define segítségével deklaráljuk, ezek után nem kell ;-t használni
-    - a konstans lehet akármilyen adattípus
-    - a konstansokat csupa nagybetűvel ajánlott írni írni
-    - a konstans fordítási időben változtatható
-    - konstanst csak a main előtt lehet létrehozni
+Változók:
+    - nem tartalmazhat ékezetes karaktereket a változó neve!!
+    - lehetőleg minél később deklaráljuk a változókat, mivel így memóriát spórolunk
+    - a változó első betűje kicsi
 
-Egyéb megjegyzések:
-\t - tabulátor (a moodle rendszerben nem működik, ott ne használd!!)
+Fogalmak:
+- inicializáls: kezdőérték adás
+
+Feltételes operátorok:
+- < (kisebb)
+    (balérték < jobbérték)
+- <= (kisebb, egyenlő)
+- > (nagyobb)
+- >= (nagyobb, egyenlő)
+- == (azonosan egyenlő)
+- != (nem egyenlő)
+
+Ciklus:
+while(feltétel -ha igaz, akkor fut le a ciklusmag-) {
+  ciklusmag
+}
 */
