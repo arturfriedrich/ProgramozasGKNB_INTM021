@@ -39,7 +39,7 @@ Feltételes operátorok:
 - != (nem egyenlő)
 
 Ciklus:
-while(feltétel -ha igaz, akkor fut le a ciklusmag-) {
+while(feltétel, ciklusváltozó -ha igaz, akkor fut le a ciklusmag-) {
   ciklusmag
 }
 */
