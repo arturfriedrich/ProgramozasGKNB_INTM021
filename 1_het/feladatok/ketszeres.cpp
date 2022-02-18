@@ -1,4 +1,6 @@
 // Kérjünk be egy számot (int) és írjuk ki a kétszeresét
+// https://drive.google.com/file/d/14fREgbIdrabdL0zlkqf_A51faiFdB6L5/view
+
 #include <iostream>
 
 using namespace std;
