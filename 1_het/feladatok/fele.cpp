@@ -1,4 +1,5 @@
 // Ha a szám páros, írjuk ki a felét
+// https://drive.google.com/file/d/1UYwQdlbjU9fP7OXVWl_2pEs5utR3vLH2/view
 
 #include <iostream>
 
