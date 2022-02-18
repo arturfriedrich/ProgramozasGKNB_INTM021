@@ -1,5 +1,6 @@
 // Kérjük be N értékét, majd írjuk ki a számokat 1-től N-ig
 // Ellenőrizzük, hogy N>1
+// https://drive.google.com/file/d/12HT0StNkeOSc5aut0H3rf8RXZrAqT_-B/view
 
 #include <iostream>
 
