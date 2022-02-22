@@ -1,4 +1,5 @@
 // Kérjünk be számokat, amíg páratlan számot nem kapunk, és a párosoknak mindig írjuk ki a felét
+// https://drive.google.com/file/d/1EondN-QWv-NDSpzAR8I6dmq3P9fqWJXI/view
 
 #include <iostream>
 using namespace std;
