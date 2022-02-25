@@ -3,6 +3,7 @@
 //     2. Szorzás
 //     3. Hatványozás
 //     4. Számtani sorozat a0 és d alapján n elem (önálló feladat, a három paramétert be kell kérni)
+// https://drive.google.com/file/d/19M0lBOIlHGBVA-ePqd9B_7zUz2BaV_5l/view
 
 #include <iostream>
 #include <math.h>
