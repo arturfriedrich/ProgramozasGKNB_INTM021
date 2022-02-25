@@ -11,9 +11,9 @@ int main() {
     while(cout << "\n Kérem a(z) " << szam << ". karaktert: ",
         kar=cin.get(), kar!=EOF) {
 	    szam++;
-    cout << "A megadott karakter a(z): "  << kar << endl;
+        cout << "A megadott karakter a(z): "  << kar << endl;
 	}
     cout << "\n Az Ön kilépő karaktere a(z): "  << kar 
          << " amely a(z) " << szam << "." << endl;
-return 0;
+    return 0;
 }
