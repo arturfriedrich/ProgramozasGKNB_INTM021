@@ -35,10 +35,10 @@ int main() {
              kar++; // kar+=2;
              ki=0; break; 
              } 
-   cout << " Az átkódolás utáni kimenet a(z): ' " << /*(int)*/ kar << " '" << endl;
-//   cout << " A helye az ABC-ben: ";
-//   if(kar>='a' && kar<='z') cout << kar-96 /* kar-'a'+1*/ << endl;
-//   else cout << kar-64 /* kar-'A'+1*/ << endl;
+   cout << " Az átkódolás utáni kimenet a(z): ' " << /*(int)*/ kar << " '" << endl;      // iránítottan konvertáljuk int-re az (int)-el
+   cout << " A helye az ABC-ben: ";
+   if(kar>='a' && kar<='z') cout << kar-'a'+1 << endl;
+   else cout << kar-'A'+1 << endl;
   } while(ki);
 return 0;
 }
