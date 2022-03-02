@@ -45,9 +45,11 @@ int main() {
         i++;
     }
     i = 0;
+    cout << "A módosított tömb: ";
     while ( i < N ) {
-        cout << szamok[i] << endl;
+        cout << szamok[i] << " ";
         i++;
     }
+    cout << endl;
     return 0;
 }
