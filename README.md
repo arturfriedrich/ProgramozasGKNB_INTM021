@@ -1,4 +1,9 @@
-# Programozás (GKNB_INTM021) gyakorlat
-Ez a repo a Széchenyi István Egyetem Programozás (GKNB_INTM021) tárgyának gyakorlatán taglalt C++ anyagot gyűjti össze.
+#Programozás (GKNB_INTM021)
+Ez a repo a Széchenyi István Egyetem Programozás (GKNB_INTM021) tárgyának anyagát gyűjti össze.
 
-Előadó: Horváth Zsolt (gyakorlat), Hatwágner Ferenc Miklós (előadás)
+### Fájlstruktúra
+A félév anyaga hetekre van bontva (n_het/), minden hét tartalmazza az azon a héten aktuális elméleti óra anyagát, valamint a gyakolatok feladatait Hatwágner (gyak_hatwag) és Horzsol (gyak_horzsol) gyakorlati óráiról is. Előbbiben találhatóak vidók egyes feladatok megoldásairól, ezek a videók mindig a hozzá tartozó feladattal (/feladatokkal) megegyező elnevezésűek.
+
+### Tanárok:
+- Horváth Zsolt (horzsol@sze.hu)
+- Hatwágner Ferenc Miklós (miklos.hatwagner@sze.hu)
