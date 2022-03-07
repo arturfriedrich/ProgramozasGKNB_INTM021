@@ -1,4 +1,4 @@
-#Programozás (GKNB_INTM021)
+# Programozás (GKNB_INTM021)
 Ez a repo a Széchenyi István Egyetem Programozás (GKNB_INTM021) tárgyának anyagát gyűjti össze.
 
 ### Fájlstruktúra
