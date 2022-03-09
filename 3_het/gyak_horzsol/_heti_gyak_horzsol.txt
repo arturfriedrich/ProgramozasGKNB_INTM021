@@ -1,0 +1,208 @@
+// 3/1 'and' kulcsszó
+
+#include<iostream>
+
+#define KT 10
+
+using namespace std;
+
+int main() {
+	int f_k=0, alap;
+	double k_e=1;
+	bool beker=true;
+	do {
+	   cout << "Kérem a nem nulla, egyszámjegyű  alapot: ";
+	   cin >> alap; cout << endl;
+	   if(alap>0 and alap<=9) beker=false;
+	   else if(alap==0)
+	                 cout << "A megadott alap a nulla!" << endl;	  
+     	  else if(alap>9 and alap<=99)
+	                 cout << "A megadott alap kétszámjegyű!" << endl;
+	      else if(alap>99 and alap<=999)
+	                 cout << "A megadott alap három-számjegyű!" << endl; 
+		  else cout << "A megadott alap több mint három-számjegyű!" << endl;
+	  } while(beker); // bekérő ciklus
+	while(f_k <= KT) {
+	  if(f_k!=0) k_e *= alap;
+	  cout << alap << "^" << f_k << ". hatványa: " << k_e << endl;
+	  f_k++;
+	 } // hatvány ciklus
+return 0;
+}
+/***************************************************************************************/
+// 3/2 tömbök
+#include<iostream>
+
+#define KT 10
+
+using namespace std;
+
+int main() {
+	int f_k=0, alap;
+	double k_e[KT+1];
+  //double k_e[KT+1]={0};
+ /*while(f_k<=KT) {	  
+	  cout << " A tömb " << f_k+1 << ". eleme: " << k_e[f_k] << "\n";
+	  f_k++;
+	 } // kiir ciklus
+  cout << endl; */
+	bool beker=true;
+	do {
+	   cout << "Kérem a nem nulla, egyszámjegyű  alapot: ";
+	   cin >> alap; cout << endl;
+	   if(alap>0 and alap<=9) beker=false;
+	   else if(alap==0)
+	        cout << "A megadott alap a nulla!" << endl;	  
+     else if(alap>9 and alap<=99)
+	        cout << "A megadott alap kétszámjegyű!" << endl;
+	   else if(alap>99 and alap<=999)
+	        cout << "A megadott alap három-számjegyű!" << endl; 
+		 else cout << "A megadott alap több mint három-számjegyű!" << endl;
+	  } while(beker); // bekérő ciklus
+	while(f_k<=KT) {
+	  if(f_k==0) k_e[0]=1;
+    else k_e[f_k] = k_e[f_k-1] * alap;
+	  cout << alap << "^" << f_k << ". hatványa: " << k_e[f_k] << endl;
+	  f_k++;
+	 } // hatvány ciklus
+/*   cout << endl; f_k=KT;
+   while(f_k>=0) {	  
+	  cout << alap << "^" << f_k << ". hatványa: " << k_e[f_k] << endl;
+	  f_k--;
+	 } // fordított kiir ciklus	 */
+return 0;
+}
+/***************************************************************************************/
+// 3/3 tömbök indexe vs. elemszáma, méret-operátor
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int fut=0, prtln[]={1, 3, 5, 7, 9};
+	int n=sizeof(prtln)/sizeof(prtln[0]);
+  while(fut<n) {	  
+	 cout << " A tömb " << fut+1 << ". eleme a(z): '" << prtln[fut] 
+        << "' amely a(z) " << fut << ". indexű!" << endl;
+	 fut++;
+  } // kiir ciklus
+return 0;
+}
+/***************************************************************************************/
+// 3/4 buborék rendezés növekvőre ill. csökkenőre
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int fut=0, prtln[]={1, -3, 9, -7, 5};
+	int n=sizeof(prtln)/sizeof(prtln[0]);
+  while(fut<n) {	  
+	  cout << " A tömb " << fut+1 << ". eleme a(z): '"; 
+    cout.width(2);
+    cout << prtln[fut] << "' amely a(z) " << fut << ". indexű!" << endl;
+	  fut++;
+   } // rendezetlen kiir ciklus
+  // Buborék rendezés
+  int v=n-1;
+  while(v>=1) {
+   int e=0, csere;
+   while(e<v) {
+    if(prtln[e]>prtln[e+1])  // '>'== növekvő ill. '<'== csökkenő
+     { csere=prtln[e]; prtln[e]=prtln[e+1]; prtln[e+1]=csere; }
+    e++;
+    } // belső rendező ciklus
+   v--;
+  } // külső rendező ciklus
+ fut=0; cout << endl;
+ while(fut<n) {	  
+	  cout << " A tömb " << fut+1 << ". eleme a(z): '"; 
+    cout.width(2);
+    cout << prtln[fut] << "' amely a(z) " << fut << ". indexű!" << endl;
+	  fut++;
+   } // rendezett kiir ciklus
+return 0;
+}
+/***************************************************************************************/
+// 3/5 string mint tömb, szöveg összefűzések és összehasonlítások
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int fut=0, prtln[]={1, 3, 5, 7, 9};
+	int n=sizeof(prtln)/sizeof(prtln[0]);
+  string el=" A tomb ", ms=". eleme a(z): '",
+         hr="' amely a(z) ", ng=". indexu!", mind="\n";
+  while(fut<n) {	  
+	 cout << el << fut+1 << ms << prtln[fut] 
+        << hr << fut << ng << endl;
+	 fut++;
+  } // kiir ciklus
+ cout << "\n Az első hossza: " << el.length();
+ cout << "\n Az első 2" << ms << el[1] << "'";
+ cout << "\n Az első 7" << ms << el[6] << "'" << endl;
+ mind+=el+ms+hr+ng;
+ cout << mind << "\n Az összefűzés hossza: " << mind.length();
+ cout << "\n A mind 1" << ms << mind[0] << "'";
+ if(mind[0]=='\n') cout << "\n Ez az 'Új-sor' kódja!";
+ if(el==" A tomb ") cout << "\n Ez valóban az első!" << endl;
+return 0;
+}
+/***************************************************************************************/
+// 3/6 karakter osztályozó makrók, a ? operátor
+#include<iostream>
+//#include<cctype>  // ha nincs, nem működnek a makrók!?
+#include<cstring> // strlen() fgv.-hez!
+
+#define MAX 128
+
+using namespace std;
+
+int main() {
+  //string el=" A tomb ";
+	bool helyes;
+  char rsz[MAX];
+  int hsz;
+  do {
+    cout << "\n Kérem a rendszámot: ";
+    cin.getline(rsz,MAX); cout << endl;
+    hsz=strlen(rsz);
+    hsz>7 ? helyes=false : helyes=true;
+    for(int i=0; helyes and i<7; i++)
+     { 
+      if(i<3 and not isalpha(rsz[i])) helyes=false;
+      else if(i>=4 and not isdigit(rsz[i])) helyes=false;
+      else if(rsz[3]!='-') helyes=false;
+      //else if(not (rsz[3]=='-' or rsz[3]=='_' or isspace(rsz[3])) ) helyes=false;
+     }
+    if(helyes)
+     {
+      bool es;
+      for(int i=0; i<7; i++)
+       {
+        es=0;
+        if(isalnum(rsz[i])) { cout << "'" << rsz[i] << "' => alfanumerikus"; es=1; }
+        if(islower(rsz[i])) cout << " és kisbetű";
+        if(isupper(rsz[i])) cout << " és nagybetű";
+        if(isprint(rsz[i])) {
+         if(es) cout << " és nyomtatható!" << endl;
+         else cout << "'" << rsz[i] << "' => nyomtatható!" << endl; }
+        if(isspace(rsz[i])) cout << "'" << rsz[i] << "' => fehérkarakter!" << endl;
+        if(not isxdigit(rsz[i])) cout << "'" << rsz[i] << "' => nem hexadecimális!"
+                                      << endl;
+        else cout << "'" << rsz[i] << "' => hexadecimális is!" << endl;
+        rsz[i]=toupper(rsz[i]); // tolower(); kisbetűsre alakít
+        if(i==3 and rsz[i]!='-') rsz[i]='-';
+        cout << endl; 
+       } // for
+      cout << "\n A rendszám helyes: " << rsz << endl;
+     }
+    else cout << " Helytelen a rendszám!";
+  } while(not helyes); // do while
+//cout << "\n Az első hossza: " << el.length();
+//cout << "\n Az első hossza: " << strlen(el);
+//cout << "\n Az rsz hossza: " << rsz.length();
+return 0;
+}
+/***************************************************************************************/
