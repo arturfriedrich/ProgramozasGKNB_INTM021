@@ -15,21 +15,21 @@ int main() {
     cout << INT_MIN << " => " << INT_MAX << endl;
     cout << DBL_MIN << " => " << DBL_MAX << "\n" << endl;
 	do {
-	    cout << " Kérem a(z) " << fut+1 <<". nem nulla alapot a(z) "
-             << MAX << "-bő(ó)l: ";
-	    cin >> alap[fut]; 
-        if(alap[fut]!=0) 
-            {
-                cout << "\t Kérem a(z) " << fut+1 <<". hatványkitevőt: ";
-                cin >> kitevo[fut];
-                hatvany[fut]=pow(alap[fut],kitevo[fut]); // Implicit
-                fut++; cout << endl;
-            }
+	cout << " Kérem a(z) " << fut+1 <<". nem nulla alapot a(z) "
+         << MAX << "-bő(ó)l: ";
+	cin >> alap[fut]; 
+    if(alap[fut]!=0) 
+        {
+            cout << "\t Kérem a(z) " << fut+1 <<". hatványkitevőt: ";
+            cin >> kitevo[fut];
+            hatvany[fut]=pow(alap[fut],kitevo[fut]); // Implicit
+            fut++; cout << endl;
+        }
 	} while(fut<MAX);
     cout << "\n A hatványok:" << endl;
     for(fut=0; fut<MAX; fut++) { cout << hatvany[fut] << endl; }
     cout << "\n A gyökök:" << endl;
-    cout << " 3. gyök alatt 27: " << pow(27,(double)1/3) << endl; // Explicit
+    cout << " 3. gyök alatt 27: " << pow(27,/*(double)*/1/3) << endl; // Explicit
     cout << " 2. gyök alatt 81: "<< sqrt(81) << endl;
     cout << "\n A sin(x) és cos(x) értékek:" << endl;
     cout << " 180° szinusza: "<< sin(M_PI) << endl;
