@@ -203,6 +203,9 @@ int main() {
 //cout << "\n Az első hossza: " << el.length();
 //cout << "\n Az első hossza: " << strlen(el);
 //cout << "\n Az rsz hossza: " << rsz.length();
+//if(rsz[0]=='E') cout << "\n A 0. indexű elem az: 'E'!" << endl;
+//if(rsz=="ERT-123") cout << "\n Az 'rsz' tartalma: " << rsz << endl;
+//rsz+=rsz+rsz+el;
 return 0;
 }
 /***************************************************************************************/
