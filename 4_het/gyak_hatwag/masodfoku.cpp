@@ -17,15 +17,19 @@ int main() {
         cin >> valtozok[i];
     }
     // megoldások kalkulálása
+    float d;
     float megoldasok[2];
-    megoldasok[0] = ( -valtozok[1]+( sqrt(pow(valtozok[1], 2)-4*valtozok[0]*valtozok[2]) ) ) / (2*valtozok[0]);
-    megoldasok[1] = ( -valtozok[1]-( sqrt(pow(valtozok[1], 2)-4*valtozok[0]*valtozok[2]) ) ) / (2*valtozok[0]);
+    d = sqrt(pow(valtozok[1], 2)-4*valtozok[0]*valtozok[2]);
+    megoldasok[0] = ( -valtozok[1] + d ) / (2*valtozok[0]);
+    megoldasok[1] = ( -valtozok[1] - d ) / (2*valtozok[0]);
     // eredmény kiírása, ha a megadott adatok helyesek
     if ( isnan(megoldasok[0]) or valtozok[0] == 0 ) {
         cout << "A megadott egyenlet nem másodfokú, vagy nincs gyöke a valós számok halmazán." << endl;
-    } else {
-        cout << "x1: " << megoldasok[0] << endl;
-        cout << "x2: " << megoldasok[1] << endl;
+    } else if ( d > 0 ) {
+        cout << "x1 = " << megoldasok[0] << endl;
+        cout << "x2 = " << megoldasok[1] << endl;
+    } else if ( d == 0 ) {
+        cout << "Az egyenletnek egy megoldása létezik: x1 = x2 = " <<  megoldasok[0] << endl;
     }
     return 0;
 }
