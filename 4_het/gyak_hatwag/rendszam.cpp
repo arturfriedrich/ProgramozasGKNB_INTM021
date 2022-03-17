@@ -14,19 +14,18 @@ using namespace std;
 
 int main() {
     cout << "A program rendszámokat kér be, majd visszaadja, hogy az adott rendszám helyes-e." << endl;
+	bool helyes;
     string rsz;
+    int hsz;
     do {
-        cout << "Kérem a következő rendszámot: ";
+        cout << "Kérem a rendszámot: ";
         cin >> rsz;
-        if ( rsz != "k" ) {
-            bool helyes = true;
-            rsz.length() != 7 ? helyes = false : helyes = true;
-            for(int i=0; helyes and i<7; i++) { 
-                if(i<3 and not isalpha(rsz[i])) helyes=false;
-                else if(i>=4 and not isdigit(rsz[i])) helyes=false;
-                else if(not (rsz[3]=='-' or rsz[3]=='_' or isspace(rsz[3])) ) helyes=false;
-            }
-        cout << "Ez a rendszám formailag " << ( helyes ? "helyes." : "hibás.") << endl;
+        rsz.length() > 7 ? helyes=false : helyes=true;
+        for(int i=0; helyes and i<7; i++) { 
+            if(i<3 and not isalpha(rsz[i])) helyes=false;
+            else if(i>=4 and not isdigit(rsz[i])) helyes=false;
         }
-    } while ( rsz != "k" );
+        if( not (rsz[3]=='-' or isspace(rsz[3])) ) helyes=false;
+        cout << "Ez a rendszám formailag " << ( helyes ? "helyes." : "hibás.") << endl;
+    } while( rsz != "k" );
 }
