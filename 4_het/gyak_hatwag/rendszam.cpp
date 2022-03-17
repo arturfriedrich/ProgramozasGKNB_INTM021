@@ -17,16 +17,16 @@ int main() {
     string rsz;
     do {
         cout << "Kérem a következő rendszámot: ";
-        cin >> rsz; 
+        cin >> rsz;
         if ( rsz != "k" ) {
             bool helyes = true;
             rsz.length() != 7 ? helyes = false : helyes = true;
-            for ( int i=0; helyes and i<7; i++ ) { 
-                if ( i<3 and not isalpha(rsz[i]) ) helyes = false;
-                else if ( i >= 4 and not isdigit(rsz[i]) ) helyes = false;
-                else if ( rsz[3] != '-' or rsz[3] != '_' or not isspace(rsz[3]) ) helyes=false;
+            for(int i=0; helyes and i<7; i++) { 
+                if(i<3 and not isalpha(rsz[i])) helyes=false;
+                else if(i>=4 and not isdigit(rsz[i])) helyes=false;
+                else if(not (rsz[3]=='-' or rsz[3]=='_' or isspace(rsz[3])) ) helyes=false;
             }
-            cout << "Ez a rendszám formailag " << ( helyes ? "helyes." : "hibás.") << endl;
+        cout << "Ez a rendszám formailag " << ( helyes ? "helyes." : "hibás.") << endl;
         }
     } while ( rsz != "k" );
 }
