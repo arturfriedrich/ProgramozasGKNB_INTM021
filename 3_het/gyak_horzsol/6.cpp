@@ -22,7 +22,7 @@ int main() {
       if(i<3 and not isalpha(rsz[i])) helyes=false;
       else if(i>=4 and not isdigit(rsz[i])) helyes=false;
       else if(rsz[3]!='-') helyes=false;
-      //else if(not (rsz[3]=='-' or rsz[3]=='_' or isspace(rsz[3])) ) helyes=false;
+      else if(not (rsz[3]=='-' or rsz[3]=='_' or isspace(rsz[3])) ) helyes=false;
      }
     if(helyes)
      {
