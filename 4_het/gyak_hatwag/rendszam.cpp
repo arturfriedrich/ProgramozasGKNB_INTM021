@@ -13,19 +13,23 @@
 using namespace std;
 
 int main() {
-    cout << "A program rendszámokat kér be, majd visszaadja, hogy az adott rendszám helyes-e." << endl;
-	bool helyes;
-    string rsz;
-    int hsz;
+    cout << "A program rendszámokat kér be, majd visszaadja, hogy az adott rendszám helyes-e. (kilépés k-val)" << endl;
+    string rendszam;
     do {
-        cout << "Kérem a rendszámot: ";
-        cin >> rsz;
-        rsz.length() > 7 ? helyes=false : helyes=true;
-        for(int i=0; helyes and i<7; i++) { 
-            if(i<3 and not isalpha(rsz[i])) helyes=false;
-            else if(i>=4 and not isdigit(rsz[i])) helyes=false;
+        cout << "Adjom meg egy rendszámot: ";
+        cin >> rendszam;
+        if ( rendszam != "k" ) {
+            bool hibas = false;
+            int i;
+            if ( rendszam.length() > 7 ) hibas = true;
+            for ( i=0; not hibas and i<3; i++ ) {
+                if ( not isalpha(rendszam[i]) ) hibas = true;
+            }
+            if ( not (rendszam[i] != '-' or rendszam[i] != '_' or isspace(rendszam[i])) ) hibas = true;
+            for ( i=4; not hibas and i<7; i++ ) {
+                if ( not isdigit(rendszam[i]) ) hibas = true; 
+            }
+            cout << "A rendszám formailag " << (hibas ? "hibás" : "helyes ") << endl;
         }
-        if( not (rsz[3]=='-' or isspace(rsz[3])) ) helyes=false;
-        cout << "Ez a rendszám formailag " << ( helyes ? "helyes." : "hibás.") << endl;
-    } while( rsz != "k" );
+    } while( rendszam != "k" );
 }
