@@ -2,4 +2,8 @@ Ha bármilyen megjegyzésed vagy kérdésed van azt kérlek ide írd.
 
 Kijavítandó feladatok:
 - 3_het/gyak_hatwag/shift.cpp
-- 4_het/gyak_hatwag/rendszam.cpp
+- 4_het/gyak_hatwag/rendszam.cpp   // @HussarOne @arturfriedrich
+- up to date heti előadás/gyak_horzsol/gyak_hatwag merged létrehozáa (ismétlődő)
+
+Folytatni az 5. heti Hatwagner anyagtól, esetleg előre dolgozni videók alapján.
+(Azért mert órákon elmaradás van, 4. heti anyagot oldjuk a 6. heti alkalmon, ezért csúszás van)
