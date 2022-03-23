@@ -3,3 +3,5 @@ Ha bármilyen megjegyzésed vagy kérdésed van azt kérlek ide írd.
 Kijavítandó feladatok:
 - 3_het/gyak_hatwag/shift.cpp
 - 4_het/gyak_hatwag/rendszam.cpp
+
+HELOOOOOOO
