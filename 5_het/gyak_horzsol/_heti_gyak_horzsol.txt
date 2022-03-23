@@ -146,14 +146,14 @@ bool beker(char rszm[])
  cout << "\n Kérem a rendszámot: ";
  cin.getline(rszm,MAX); cout << endl;
  int hsz=strlen(rszm);
- if(hsz!=LT) return(false);
+ if(hsz!=LT) return false;
  for(int i=0; i<LT; i++)
   { 
-   if(i<3 and not isalpha(rszm[i])) return(false);
-   else if(i>=4 and not isdigit(rszm[i])) return(false);
-   else if(not (rszm[3]=='-' or rszm[3]=='_' or isspace(rszm[3])) ) return(false);
+   if(i<3 and not isalpha(rszm[i])) return false;
+   else if(i>=4 and not isdigit(rszm[i])) return false;
+   else if(not (rszm[3]=='-' or rszm[3]=='_' or isspace(rszm[3])) ) return false;
   }
- return(true);
+ return true;
 }
 
 void ertekel(char rszm[])
@@ -181,9 +181,10 @@ int main() {
   char rsz[MAX];
   bool helyes;
   do {
-     if(helyes=beker(rsz)) ertekel(rsz);
-     else cout << " Helytelen a rendszám!";
-  } while(not helyes);
+        helyes=beker(rsz);
+        if(helyes) ertekel(rsz);
+        else cout << " Helytelen a rendszám!";
+    } while(not helyes);
 return 0;
 }
 /***************************************************************************************/
