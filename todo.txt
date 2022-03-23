@@ -1,7 +1,6 @@
 Ha bármilyen megjegyzésed vagy kérdésed van azt kérlek ide írd.
 
 General TODO:
-- 5.heti Hatwagner gyakorlat teljes
 - 5. heti Hatwagner gyakorlat scriptek
 - 5. heti eloadas scriptek
 
