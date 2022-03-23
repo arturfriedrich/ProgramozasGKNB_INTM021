@@ -5,3 +5,4 @@ Kijavítandó feladatok:
 - 4_het/gyak_hatwag/rendszam.cpp
 
 HELOOOOOOO
+Szeva
