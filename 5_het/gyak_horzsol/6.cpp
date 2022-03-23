@@ -3,8 +3,6 @@
 //#include<cctype>  // ha nincs, nem működnek a makrók!?
 #include<cstring> // strlen() fgv.-hez!
 
-// HIBÁS FGV SORREND!!!
-
 #define MAX 128
 #define LT 7
 
