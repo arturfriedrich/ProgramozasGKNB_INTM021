@@ -20,15 +20,11 @@ int main() {
         cin >> rendszam;
         if ( rendszam != "k" ) {
             bool hibas = false;
-            int i;
-            if ( rendszam.length() > 7 ) hibas = true;
-            for ( i=0; not hibas and i<3; i++ ) {
-                if ( not isalpha(rendszam[i]) ) hibas = true;
-            }
-            if ( not (rendszam[i] != '-' or rendszam[i] != '_' or isspace(rendszam[i])) ) hibas = true;
-            for ( i=4; not hibas and i<7; i++ ) {
-                if ( not isdigit(rendszam[i]) ) hibas = true; 
-            }
+            for(int i=0; i<7; i++) { 
+                if(i<3 and not isalpha(rendszam[i])) hibas = true;
+                else if(i>=4 and not isdigit(rendszam[i])) hibas = true;
+                else if(not (rendszam[3]=='-' or rendszam[3]=='_' or isspace(rendszam[3])) ) hibas = true;
+                }
             cout << "A rendszám formailag " << (hibas ? "hibás" : "helyes ") << endl;
         }
     } while( rendszam != "k" );
