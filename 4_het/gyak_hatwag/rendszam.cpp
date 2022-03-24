@@ -16,7 +16,7 @@ int main() {
     cout << "A program rendszámokat kér be, majd visszaadja, hogy az adott rendszám helyes-e. (kilépés k-val)" << endl;
     string rendszam;
     do {
-        cout << "Adjom meg egy rendszámot: ";
+        cout << "Adjon meg egy rendszámot: ";
         cin >> rendszam;
         if ( rendszam != "k" ) {
             bool hibas = false;
