@@ -5,5 +5,12 @@ Kijavítandó feladatok:
 - 4_het/gyak_hatwag/rendszam.cpp   // @HussarOne @arturfriedrich
 - up to date heti előadás/gyak_horzsol/gyak_hatwag merged létrehozáa (ismétlődő)
 
+Stuktúrális feladatok:
+- Próba vizsgák átnézése, feltöltése (vizsgak_all folder, de milyen formában?)
+- Videotóriumi feladatok közt van próbavizsga megoldás, lehet ezeket menteni kéne és videókhoz berakni
+- A _videok_all mappába azok a felvételek is jöjjenek, amik a gyak_hatwag feladatos rövid .mp4 videói?
+- Syntax kidolgozás külön text formatba. (per óra basis? linkek elegek lennének ebbe vagy kifejtősen akarom?) [prog holy grail]
+- 22.03.28: Kidolgozni a 6. és 7. heti anyagot gyak_hatwag-okba a képek és a replit alapján! (txt files from chat w/ Artúr)
+
 Folytatni az 5. heti Hatwagner anyagtól, esetleg előre dolgozni videók alapján.
 (Azért mert órákon elmaradás van, 4. heti anyagot oldjuk a 6. heti alkalmon, ezért csúszás van)
