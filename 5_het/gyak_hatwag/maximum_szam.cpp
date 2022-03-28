@@ -8,17 +8,25 @@
 using namespace std;
 
 int maximum(int a, int b) {
-    return max(a, b);
+    if ( a > b ) {
+        return a;
+    } else {
+        return b;
+    }
 }
 
 int main() {
-    int legnagyobb;
-    cout << "Adjon meg egy számot: ";
-    cin >> legnagyobb;
-    int x;
+    int aktMax, uj, db=0;
+    cout << "Adja meg az első számot: ";
+    cin >> aktMax;
     do {
-        cout << "Adjon meg egy számot: ";
-        cin >> x;
-    } while ( legnagyobb*3 < x );
+        cout << "Adja meg a következő számot: ";
+        cin >> uj;
+        if ( maximum(uj, aktMax) > aktMax ) {
+            aktMax = uj;
+            db++;
+            cout << "Ez volt a(z) " << db << ". nagyobb szám." << endl; 
+        }
+    } while ( db < 3 );
     return 0;
 }
