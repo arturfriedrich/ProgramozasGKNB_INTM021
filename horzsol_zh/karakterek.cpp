@@ -17,8 +17,8 @@ int beker(char be_tb[]) {
 }
 
 void cserel(char s_tb[], int hossz, int *mgh, int *szk, int *msh, int *eb, int *tcs) {
-    for ( int i = 0; i<strlen(s_tb); i++) {
-        if ( s_tb[i] == 'z' or s_tb[i] == 'Z') {
+    for ( int i = 0; i<strlen(s_tb); i++ ) {
+        if ( s_tb[i] == 'z' or s_tb[i] == 'Z' ) {
             s_tb[i] = '!';
             (*tcs) += 1;
         }
@@ -43,7 +43,7 @@ void cserel(char s_tb[], int hossz, int *mgh, int *szk, int *msh, int *eb, int *
     }
 }
 
-int main() {
+void kiir() {
     char szvg[N];
     beker(szvg);
     int main_mgh=0;
@@ -59,6 +59,10 @@ int main() {
     cout << "Szóköz: " << main_szk << endl; 
     cout << "Mássalhangzó: " << main_msh << endl; 
     cout << "Egyéb: " << main_eb << endl; 
-    cout << "Tulcsordulás: " << main_tcs << endl; 
+    cout << "Túlcsordulás: " << main_tcs << endl; 
+}
+
+int main() {
+    kiir();
     return 0;
 }
