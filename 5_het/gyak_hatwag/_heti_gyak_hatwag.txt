@@ -1,16 +1,17 @@
-Összeadás függvénnyel
+Összeadás függvénnyel - (osszeadas.cpp, osszeadas.mp4)
 - Írjon függvényt, amely két számot vár paraméterül és eredményül visszaadja a két szám összegét!
 - Írjon programot, amely két számot olvas be mindaddig, míg azok összege nem osztható 7-tel! A feladat megoldásához használja fel az előzőleg megírt függvény!
 (Felhasznált forrás: PE-MIK C Programozás I feladatgyűjtemény)
    
-Nagyobb szám függvénnyel
-- Írjon függvényt, amely két számot vár paraméterül és eredményül `1`-et ad vissza, ha az első szám nagyobb a másodiknál, `-1`-et, ha a második nagyobb az elsőnél, `0`-át, ha egyenlők!
-- Olvasson be egy hételemű tömböt!
-- Írassa ki a képernyőre azon szomszédos elemeket, amelyekre igaz, hogy az első nagyobb a másodiknál!
+Nagyobb szám függvénnyel (hasonlit_nagyobb.mp4)
+- Írjon függvényt, amely két számot vár paraméterül és eredményül `1`-et ad vissza, ha az első szám nagyobb a
+  másodiknál, `-1`-et, ha a második nagyobb az elsőnél, `0`-át, ha egyenlők! - (hasonlit.cpp)
+- Olvasson be egy hételemű tömböt!- (hasonlit_tomb.cpp)
+- Írassa ki a képernyőre azon szomszédos elemeket, amelyekre igaz, hogy az első nagyobb a másodiknál! - (hasonlit_tomb.cpp)
 (Felhasznált forrás: PE-MIK C Programozás I feladatgyűjtemény)
 
   
-Legnagyobb szám függvénnyel
+Legnagyobb szám függvénnyel - (maximum_szam.cpp, maximum_szam.mp4)
 - Írjon függvényt, amely két számot vár paraméterül és eredményül visszaadja a két szám maximumát!
 - Olvasson be egy számot, amelyet eltárol jelenlegi maximális értékként!
 - Olvasson be számokat addig, míg nem adunk meg háromszor is nagyobb számot az előzőeknél! A nagyobb számot mindig tárolja el jelenlegi maximumként!

@@ -1,4 +1,5 @@
 // Kérjünk be két számot, majd mondjuk meg, hogy az első a nagyobb, a második, vagy egyenlők!
+// https://drive.google.com/file/d/1EondN-QWv-NDSpzAR8I6dmq3P9fqWJXI/view 
 
 #include <iostream>
 using namespace std;

@@ -24,8 +24,9 @@ int main() {
         cout << "Adja meg a " << i+1 << ". számot: ";
         cin >> szamok[i];
     }
-    for ( int j=0; j<N; j++) {
-        if ( hasonlit(szamok[j], szamok[j+1]) == 1 and j != N-1 ) {
+    for ( int j=0; j<N; j++) {          
+        if ( hasonlit(szamok[j], szamok[j+1]) == 1 and j != N-1) //hát ezt szebben is meg lehetett volna írni :D
+        {               // direkt castolás? char as int? videoban int van! 
             cout << szamok[j] << " " << szamok[j+1] << endl;
         }
     }

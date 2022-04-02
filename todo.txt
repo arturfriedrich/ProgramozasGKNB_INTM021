@@ -2,15 +2,28 @@ Ha bármilyen megjegyzésed vagy kérdésed van azt kérlek ide írd.
 
 Kijavítandó feladatok:
 - 3_het/gyak_hatwag/shift.cpp
-- 4_het/gyak_hatwag/rendszam.cpp   // @HussarOne @arturfriedrich
-- up to date heti előadás/gyak_horzsol/gyak_hatwag merged létrehozáa (ismétlődő)
+- 4_het/gyak_hatwag/rendszam.cpp 
+
 
 Stuktúrális feladatok:
-- Próba vizsgák átnézése, feltöltése (vizsgak_all folder, de milyen formában?)
-- Videotóriumi feladatok közt van próbavizsga megoldás, lehet ezeket menteni kéne és videókhoz berakni
-- A _videok_all mappába azok a felvételek is jöjjenek, amik a gyak_hatwag feladatos rövid .mp4 videói?
-- Syntax kidolgozás külön text formatba. (per óra basis? linkek elegek lennének ebbe vagy kifejtősen akarom?) [prog holy grail]
-- 22.03.28: Kidolgozni a 6. és 7. heti anyagot gyak_hatwag-okba a képek és a replit alapján! (txt files from chat w/ Artúr)
 
-Folytatni az 5. heti Hatwagner anyagtól, esetleg előre dolgozni videók alapján.
-(Azért mert órákon elmaradás van, 4. heti anyagot oldjuk a 6. heti alkalmon, ezért csúszás van)
+- Videotóriumi feladatok közt van próbavizsga megoldás, lehet ezeket menteni kéne és videókhoz berakni
+
+- A _videok_all mappába azok a felvételek is jöjjenek, amik a gyak_hatwag feladatos rövid .mp4 videói?
+
+- Syntax kidolgozás külön text formatba. (per óra basis? linkek elegek lennének ebbe vagy kifejtősen akarom?) [prog holy grail]
+
+- Kidolgozni a 6, 7, 8. heti anyagot gyak_hatwag-okba a képek és a replit alapján!
+
+-Folytatni az 5. heti Hatwagner anyagtól! [4. heti anyagot dolgoztuk fel a 6-7. órán, csúszás van]
+// szétszedni két filera a "névleges"-en hol tartunk gyak anyagot és a ténylegesen holt vagyunk részt? 
+
+Later/Folytonos:
+- Kereshetőség érdekében: 
+    - előadás merged pdf létrehozása?
+    - gyak_horzsol/hatwagner merged létrehozása óra elválasztással?
+- Próba vizsgák átnézése, feltöltése (vizsgak_all folder, de milyen formában?)
+
+// 5. óra szövege és videói olyanok amiket nem vettünk gyakorlaton!
+// Skippeltük az órát lemaradás miatt? 
+

@@ -1,27 +1,27 @@
-Önálló feladat
-- Olvassunk be 10 számot, majd írjuk ki az átlagukat (ehhez még nem kell tömb)
+Önálló feladat - (atlag1.cpp)
+- Olvassunk be 10 számot, majd írjuk ki az átlagukat (ehhez még nem kell tömb) 
 
-Közös feladat (előző folyt.)
+Közös feladat (előző folyt.) - (atlag2.cpp, atlag.mp4)
 - Olvassunk be 10 számot, majd írjuk ki az átlagukat (ehhez még nem kell tömb)
 - Írjuk ki az átlag alatti értékeket (itt már muszáj tömbbe eltárolni a számokat)
 
-Önálló feladat
+Önálló feladat - (vektor.cpp)
 - Olvassuk be két 3-dimenziós vektor koordinátáit
 - Írjuk ki a vektorok összegét, különbségét
 - A dimenzió legyen #define-nal megadva
 
-Közös feladat
+Közös feladat - (szamossag.cpp, szamossag.mp4)
 - Olvassunk be 10 számot egy tömbbe
 - Kérjünk be további számokat, és mondjuk meg, hányszor szerepeltek a 10 elemű tömbben
 - Ha egyszer sem szerepelt, álljon le a program
 
-Önálló feladat
+Önálló feladat - (csere.cpp)
 - Olvassunk be 10 számot egy tömbbe!
 - Kérjünk be két indexet, és cseréljük fel a megfelelő indexű elemeket, majd írjuk ki a tömböt!
 - Fejlesszük ezt tovább úgy, hogy nem indexet, hanem sorszámot kérünk a felhasználótól! A sorszám az [1, 10] zárt intervallumba essen, hogy kényelmesebb legyen a program használata a felhasználónak!
 - Ismét fejlesszük tovább a programot úgy, hogy addig ismételjük a cseréket, amíg érvénytelen sorszámot (<1 vagy >10) nem kapunk !
 
-Önálló feladat
+Önálló feladat - (shift.cpp)
 - Olvassunk be 5 számot egy tömbbe
 - Kérjünk be további számokat, és ennyivel shifteljük jobbra az elemeket, majd írjuk ki a tömböt
 - Negatív szám esetén balra shifteljen, és 5-nél nagyobbra is működjön
