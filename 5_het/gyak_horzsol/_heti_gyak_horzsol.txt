@@ -1,3 +1,13 @@
+Tartalomjegyzék:
+- amely a 3/4 függvényes verziója
+- beker() fgv
+- cím vs. érték szerinti paraméter átadás
+- amely a 3/6 függvényes verziója
+- amely az 5/4 overloading-os verziója
+- amely az 5/5 kódismétlés nélküli verziója
+- amely az 5/6 rekurzív verziója
+
+
 /***************************************************************************************/
 // 5/1, amely a 3/4 függvényes verziója
 

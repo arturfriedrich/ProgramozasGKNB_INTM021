@@ -1,3 +1,13 @@
+Tartalomjegyzék:
+- amely a 3/4 függvényes verziója
+- beker() fgv
+- cím vs. érték szerinti paraméter átadás
+- amely a 3/6 függvényes verziója
+- amely az 5/4 overloading-os verziója
+- amely az 5/5 kódismétlés nélküli verziója
+- amely az 5/6 rekurzív verziója
+
+
 /***************************************************************************************/
 // 5/1, amely a 3/4 függvényes verziója
 
@@ -417,7 +427,7 @@ int on_hiv(char rszm[], int i)
 
 void ertekel(char rszm[])    // rekurzív megoldás!
 {
- int i=0; 
+ int i=0;
  i=on_hiv(rszm,i);
  cout << "\n A rendszám helyes: " << rszm << endl;
  cout << "\n Az 'i+=' értéke: " << i << "." << endl; // faktoriálisra is: 7! = 5.040
