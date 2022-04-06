@@ -1,3 +1,12 @@
+Tartalomjegyzék:
+- Kiíratás
+- Konstansok/Literálok
+- Alap-operátorok, változó, while ciklus
+- if-else vezérlési szerkezet
+- Bekérés
+- Számábrázolási tartomány
+
+
 // 1/1 => Kiíratás
 // Ez egy 1 soros megjegyzés
 /* Ez egy több
