@@ -417,7 +417,7 @@ int on_hiv(char rszm[], int i)
 
 void ertekel(char rszm[])    // rekurzív megoldás!
 {
- int i=0; 
+ int i=0;
  i=on_hiv(rszm,i);
  cout << "\n A rendszám helyes: " << rszm << endl;
  cout << "\n Az 'i+=' értéke: " << i << "." << endl; // faktoriálisra is: 7! = 5.040

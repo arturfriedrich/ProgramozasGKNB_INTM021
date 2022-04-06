@@ -1,26 +1,27 @@
 // 5/7, amely az 5/6 rekurzív verziója
 #include<iostream>
-//#include<cctype>  // ha nincs, nem működnek a makrók!?
-#include<cstring> // strlen() fgv.-hez!
+#include<cstring>
 
 #define MAX 128
 #define LT 7
 
 using namespace std;
 
-bool beker(char rszm[])
+bool beker(char rszm[], char valasz[])
 {
+ cout << "\n Mentsem az Ön által megadott formátumú rendszámot? [i/n]: ";
+ cin.getline(valasz,MAX);  // az elágazáshoz kell, h melyik fgv. fusson!
  cout << "\n Kérem a rendszámot: ";
  cin.getline(rszm,MAX); cout << endl;
  int hsz=strlen(rszm);
- if(hsz!=LT) return(false);
+ if(hsz!=LT) return false;
  for(int i=0; i<LT; i++)
   { 
-   if(i<3 and not isalpha(rszm[i])) return(false);
-   else if(i>=4 and not isdigit(rszm[i])) return(false);
-   else if(not (rszm[3]=='-' or rszm[3]=='_' or isspace(rszm[3])) ) return(false);
+   if(i<3 and not isalpha(rszm[i])) return false;
+   else if(i>=4 and not isdigit(rszm[i])) return false;
+   else if(not (rszm[3]=='-' or rszm[3]=='_' or isspace(rszm[3])) ) return false;
   }
- return(true);
+ return true;
 }
 
 void ism_ert(char rszm[], int i)
@@ -39,29 +40,31 @@ void ism_ert(char rszm[], int i)
 
 void ism_ert(char rszm[], int i, bool vege)
 {
-  rszm[i]=toupper(rszm[i]); // tolower(); kisbetűsre alakít
+  if(i<3) {
+    if(vege) rszm[i]=tolower(rszm[i]);
+    else rszm[i]=toupper(rszm[i]); }
   if(i==3 and rszm[i]!='-') rszm[i]='-'; cout << endl; 
 }
 
 int on_hiv(char rszm[], int i)
 {
   ism_ert(rszm,i);
-  ism_ert(rszm,i,true);
+  ism_ert(rszm,i,false);
   i++;
   if(i>=LT) { cout << " Zárul a rekurzió, 'i' értéke: '" << i << "'.\n"; return i; }
-  else { cout << i << ". rekurzió!" << endl;  return i + on_hiv(rszm,i); } 
-          // az "else" csak szemléltetés, de a return nem az!
+  cout << "Indul a(z) " << i << ". rekurzió!" << endl;
+  return i + on_hiv(rszm,i);
 }
 
-void ertekel(char rszm[])
+void ertekel(char rszm[])    // rekurzív megoldás!
 {
- int i=0; 
+ int i=0;
  i=on_hiv(rszm,i);
  cout << "\n A rendszám helyes: " << rszm << endl;
  cout << "\n Az 'i+=' értéke: " << i << "." << endl; // faktoriálisra is: 7! = 5.040
 }
 
-void ertekel(char rszm[], bool eredet)
+void ertekel(char rszm[], bool eredet)  // ciklusos megoldás!
 {
  char ment[LT];
  for(int i=0; i<LT; i++)
@@ -69,17 +72,19 @@ void ertekel(char rszm[], bool eredet)
      ism_ert(rszm,i);
      ment[i]=rszm[i];
      ism_ert(rszm,i,true);
-    } // for
+    }
  cout << "\n A rendszám helyes: " << rszm << endl;
- cout << "\n A beviteli rendszám: " << ment << endl;
+ cout << "\n Az Ön által megadott rendszám-formátum: " << ment << endl;
 }
 
 int main() {
-  char rsz[MAX];
+  char rsz[MAX], elag[MAX];
   bool helyes;
   do {
-     if(helyes=beker(rsz)) ertekel(rsz);
-     //if(helyes=beker(rsz)) ertekel(rsz,true);
+      helyes=beker(rsz, elag);
+      if(helyes) {
+		    if(elag[0]!='i') ertekel(rsz);
+        else ertekel(rsz,true); }
      else cout << " Helytelen a rendszám!";
   } while(not helyes);
 return 0;

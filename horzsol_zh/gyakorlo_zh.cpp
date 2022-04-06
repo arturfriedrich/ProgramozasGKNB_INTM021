@@ -33,11 +33,11 @@ void cserel(char s_tb[], int hossz, int *mgh, int *szk,
     case ' ':
         s_tb[i]='_'; (*szk)++; break;                         
     default:
-		    if(isalpha(s_tb[i])) {
-         if(s_tb[i]!='y' and s_tb[i]!='Y' and s_tb[i]!='z' and s_tb[i]!='Z')
-				    { s_tb[i]+=2; (*msh)++; }
-         else { s_tb[i]='!'; (*tcs)++; } }
-			  else { s_tb[i]='*'; (*eb)++; }
+        if(isalpha(s_tb[i])) {
+            if(s_tb[i]!='y' and s_tb[i]!='Y' and s_tb[i]!='z' and s_tb[i]!='Z')
+                { s_tb[i]+=2; (*msh)++; }
+            else { s_tb[i]='!'; (*tcs)++; } }
+		else { s_tb[i]='*'; (*eb)++; }
         break; } }
 }
 
@@ -57,7 +57,7 @@ void kiir(char ki_tb[], int h, int mgh, int szk, int msh, int eb)
 }
 
 void kiir(char ki_tb[], int h, int mgh, int szk, int msh, int eb,
-             int tcs, string eredet, bool tulcs)
+             int tcs, string eredet)
 {
   ism_ki(ki_tb, h, mgh, szk, msh, eb);
   cout << "\n\t " << tcs << " db túlcsordulás található!";
@@ -73,6 +73,6 @@ int main() {
   int mgh=0, szk=0, msh=0, eb=0, tcs=0;
   cserel(sz_tb, n, &mgh, &szk, &msh, &eb, &tcs);
   if(tcs==0) kiir(sz_tb, n, mgh, szk, msh, eb);
-  else kiir(sz_tb, n, mgh, szk, msh, eb, tcs, ment, false);
+  else kiir(sz_tb, n, mgh, szk, msh, eb, tcs, ment);
   return 0;
 }
