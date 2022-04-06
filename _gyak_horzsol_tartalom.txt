@@ -1,0 +1,46 @@
+1. hét:
+- Kiíratás
+- Konstansok/Literálok
+- Alap-operátorok, változó, while ciklus
+- if-else vezérlési szerkezet
+- Bekérés
+- Számábrázolási tartomány
+
+2. hét:
+- Egymásba ágyazott ciklusok, if-else_if, logikai operátorok ''and" és "not", postfix
+- A postfix/prefix
+- logikai operátor ''or"
+- do while ciklus (több/ékezetes karakter egyidejű megadása!), get() fgv.
+- vessző operátor a ciklusfejben
+- szöveg végének megadása
+- char mint int, ASCII kódtábla
+- switch/case utasítás, típus konverziók
+
+3. hét:
+- 'and' kulcsszó
+- tömbök
+- tömbök indexe vs. elemszáma, méret-operátor
+- buborék rendezés növekvőre ill. csökkenőre
+- string mint tömb, szöveg összefűzések és összehasonlítások
+- karakter osztályozó makrók, a ? operátor
+
+4. hét:
+- cmath, határok
+
+5. hét:
+- amely a 3/4 függvényes verziója
+- beker() fgv
+- cím vs. érték szerinti paraméter átadás
+- amely a 3/6 függvényes verziója
+- amely az 5/4 overloading-os verziója
+- amely az 5/5 kódismétlés nélküli verziója
+- amely az 5/6 rekurzív verziója
+
+6. hét:
+- Struktúrák, tag-változókkal
+- Struktúrák, tag-tömbökkel (DB 4)
+- Struktúrák, visszatérési érték vs. cím szerinti átadás
+- Struktúrák, objektum-inicializációval
+- Struktúrák, struktúratömb-inicializációval
+- Struktúrák, tag-struktúrával és LOKÁLIS struktúratömbbel
+- Struktúrák, mutatós tömbkezelés
