@@ -1,3 +1,12 @@
+Tartalomjegyzék:
+- 'and' kulcsszó
+- tömbök
+- tömbök indexe vs. elemszáma, méret-operátor
+- buborék rendezés növekvőre ill. csökkenőre
+- string mint tömb, szöveg összefűzések és összehasonlítások
+- karakter osztályozó makrók, a ? operátor
+
+
 // 3/1 'and' kulcsszó
 
 #include<iostream>
