@@ -1,3 +1,13 @@
+Tartalomjegyzék:
+- Struktúrák, tag-változókkal
+- Struktúrák, tag-tömbökkel (DB 4)
+- Struktúrák, visszatérési érték vs. cím szerinti átadás
+- Struktúrák, objektum-inicializációval
+- Struktúrák, struktúratömb-inicializációval
+- Struktúrák, tag-struktúrával és LOKÁLIS struktúratömbbel
+- Struktúrák, mutatós tömbkezelés
+
+
 /***************************************************************************************/
 // 6/1 Struktúrák, tag-változókkal
 
