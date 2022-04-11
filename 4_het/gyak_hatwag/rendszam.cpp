@@ -9,23 +9,32 @@
 
 #include <iostream>
 #include <cctype>
-
+#include <string>
 using namespace std;
 
 int main() {
-    cout << "A program rendszámokat kér be, majd visszaadja, hogy az adott rendszám helyes-e. (kilépés k-val)" << endl;
-    string rendszam;
-    do {
-        cout << "Adjon meg egy rendszámot: ";
-        cin >> rendszam;
-        if ( rendszam != "k" ) {
-            bool hibas = false;
-            for(int i=0; i<7; i++) { 
-                if(i<3 and not isalpha(rendszam[i])) hibas = true;
-                else if(i>=4 and not isdigit(rendszam[i])) hibas = true;
-                else if(not (rendszam[3]=='-' or rendszam[3]=='_' or isspace(rendszam[3])) ) hibas = true;
-                }
-            cout << "A rendszám formailag " << (hibas ? "hibás" : "helyes ") << endl;
-        }
-    } while( rendszam != "k" );
+  string rendszam;
+  cout << "Rendszamok ellenorzese, kilepes k-val.\n";
+  do {
+    cout << "Adjon meg egy rendszamot! ";
+    //cin >> rendszam;
+    getline(cin, rendszam);
+    cout << rendszam;
+    if(rendszam != "k") {
+      bool hibas = false;
+      int i, j;
+      if(rendszam.length()<6 or rendszam.length()>7) hibas = true;
+      for(i=0; not hibas and i<3; i++) {
+        if(not isalpha(rendszam[i])) hibas = true;
+      }
+      if(rendszam[3] == '-') {
+        i=4; 
+        if(rendszam.length() != 7) hibas = true;
+      } else if(rendszam.length() != 6) hibas = true;
+      for(j=i; not hibas and j<i+3; j++) {
+        if(not isdigit(rendszam[i])) hibas = true;
+      }
+      cout << "A rendszam formailag " << (hibas?"hibas":"helyes") << ".\n";
+    }
+  } while(rendszam != "k");
 }
