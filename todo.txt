@@ -9,10 +9,6 @@ Later/Folytonos:
 
 // A _videok_all mappába azok a felvételek is jöjjenek, amik a gyak_hatwag feladatos rövid .mp4 videói?
 
-HussarOne:
-- 8. heti anyagok felrakása [Ez úgy néz ki, hogy a 6. óra anyaga]
-
-
 TimeLine:
             gyak_horzsol    gyak_hatwag     Moodle Gyak Óra szám
 1.hét           x                                   -
