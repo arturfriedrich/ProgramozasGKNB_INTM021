@@ -1,3 +1,15 @@
+Tartalomjegyzék:
+- dinamikus tömb-kezeléses verziója (konstans hosszal)
+- dinamikus tömb-kezeléses verziója (változó hosszal)
+- dinamikus tömb-kezeléses verziója (bővíthető hosszal)
+- amely az 5/4 könyvtári fgv.-es és dinamikus tömb-kezeléses verziója
+- Mátrixok
+- Mátrixok kezelése mutató aritmetikával/indirekcióval (közvetve)
+- Mátrixok kezelése mutatókkal (mutatóra mutató mutató, avagy a mutató tömb.)
+- Mátrixok kezelése dinamikusan
+
+
+
 /***************************************************************************************/
 // 8/1/1 az 5/2, dinamikus tömb-kezeléses verziója
            // konstans hosszal

@@ -1,3 +1,7 @@
+Tartalomjegyzék:
+- a mutató-aritmetika és a "const" típusmódosító folytatása
+
+
 /***************************************************************************************/
 // 7/1 a mutató-aritmetika és a "const" típusmódosító folytatása
 
