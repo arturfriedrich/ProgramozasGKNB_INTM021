@@ -1,0 +1,35 @@
+Bevezetés: Változók dinamikus foglalása
+
+Hozzon létre egy egész számot címző mutatót!
+Foglalja le az egész számnak szükséges helyet!
+Olvasson be egy számot a memóriaterületre!
+Írassa ki a képernyőre a beolvasott számot!
+Szabadítsa fel a használt memóriaterületet!
+
+Tömbök dinamikus foglalása
+
+Olvasson be egy egész számot billentyűzetről!
+Foglaljon helyet annyi egész számnak, amennyi az előzőleg beolvasott szám értéke!
+Olvasson be és tároljon el annyi egész számot, amennyi az előzőleg beolvasott szám értéke!
+Írassa ki a beolvasott számokat!
+Szabadítsa fel a lefoglalt memóriaterületet!
+
+Dinamikus struktúra helyfoglalás
+- Készítsen egy koordinátát tároló struktúrát!
+- Írjon függvényt, amely koordinátát olvas be billentyűzetről!
+- Foglaljon dinamikus memóriát és jelenítse meg a tárolt koordinátákat!
+- Szabadítsa fel a lefoglalt memóriaterületet!
+
+C típusú karaktertömbök foglalása:
+- Olvasson be egy legfeljebb 100 karakter hosszú szöveget!
+- Hozzon létre egy a szöveg hosszának megfelelő méretű tömböt!
+- Másolja át a szöveget a számára létrehozott tömbbe!
+- Írassa ki a szöveget!
+- Szabadítsa fel a lefoglalt memóriaterületet!
+
+Ismeretlen számú érték előfordulásának megszámlálása
+- Olvasson be egész számokat, amíg 0-t nem kap, majd mondja meg, melyik érték hányszor szerepelt a bemeneten!
+- Első szint: Az értékek egy ismert, kis intervallumba eshetnek.
+- Második szint: Nem ismert az értékek intervalluma, de csak 100-féle érték fordulhat elő.
+- Harmadik szint: Tetszőleges különböző érték előfordulhat.
+- Negyedik szint: Az érték-darabszám párokat rendezve tárolja, és bináris kereséssel keresse meg az aktuális elemet!
