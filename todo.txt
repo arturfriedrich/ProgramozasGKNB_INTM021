@@ -2,12 +2,8 @@ Ha bármilyen megjegyzésed vagy kérdésed van azt kérlek ide írd.
 
 Kijavítandó feladatok:
 - 3_het/gyak_hatwag/shift.cpp
-
-Later/Folytonos:
+- 7. heti videok és .cpp fileok átnevezése feladatnevek szerint (hülye neveik vannak ki kell találni!)
 - Próba vizsgák átnézése, feltöltése (vizsgak_all folder, de milyen formában?) [videotorium]
-- Syntax kidolgozás külön text formatba. (per óra basis? linkek elegek lennének ebbe vagy kifejtősen akarom?)
-
-// A _videok_all mappába azok a felvételek is jöjjenek, amik a gyak_hatwag feladatos rövid .mp4 videói?
 
 TimeLine:
             gyak_horzsol    gyak_hatwag     Moodle Gyak Óra szám
@@ -20,8 +16,10 @@ TimeLine:
 7.hét                           x               4. órai rendszám fgvnyen alapuló bef, //5. óra skipped!!
 8.hét                           x               6. órai struktúra tömbök, structok és tulajdonság mezők létrehozása
 9.hét                           x               7. órai mutatók használata!
-10.hét                          
-11.hét
-12.hét
+10.hét                          x               8. heti anyag                 
+11.hét                          x               9. heti anyag, Pascal haromszog, rejtjelezés
+12.hét                  elmarad, csoportok
+                        syncronba kerülnek
 13.hét
 14.hét
+
