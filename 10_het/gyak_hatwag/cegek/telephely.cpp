@@ -12,4 +12,4 @@ void kiir(const telep* t) {
     cout << "Alapítás dátuma: "; 
     kiir(&t -> alapitas);
     cout << endl << "Utolsó év árbevétele: " << t -> bevetel << endl; 
-} 
+}
