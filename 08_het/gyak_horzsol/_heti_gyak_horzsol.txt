@@ -8,8 +8,6 @@ Tartalomjegyzék:
 - Mátrixok kezelése mutatókkal (mutatóra mutató mutató, avagy a mutató tömb.)
 - Mátrixok kezelése dinamikusan
 
-
-
 /***************************************************************************************/
 // 8/1/1 az 5/2, dinamikus tömb-kezeléses verziója
            // konstans hosszal
@@ -334,8 +332,10 @@ int main() {
   return 0;
 }
 /***************************************************************************************/
-// 8/3 Mátrixok
+// 8/3/P0 Mátrixok és a több forrásfájlból álló projek
 
+/*** Decl.hpp ***/
+#pragma once
 #include<iostream>
 
 #define SR 4
@@ -343,23 +343,36 @@ int main() {
 
 using namespace std;
 
-void kiir(const char szk[][OP], char m[][OP], bool mit)
+void monogram(const char szk[][OP], char m[][OP]);
+void kiir(const char ki_tb[][OP], bool);
+
+/*** Funs.cpp ***/
+#include "Decl.hpp"
+
+void monogram(const char szk[][OP], char m[][OP])
 {
- int j; 
- char t;
- string io; 
- if(mit) io=" alap ";
- else io=" monogram ";
- for(int i=0; i<SR; i++) {
-  cout << "\n A(z)" << io << "mátrix " << i+1 << ". eleme: " << szk[i];
-  if(mit) { 
+  int j; 
+  char t;
+  for(int i=0; i<SR; i++) {
    m[i][0]=szk[i][0]; m[i][1]='.'; m[i][2]=' ';
    t='!';
    for(j=0; t!=' '; j++) { t=szk[i][j]; }
    m[i][3]=szk[i][j]; m[i][4]='.'; //m[i][5]='\0';
-  }  // if
- }  // külső for
+  } // külső for
 }
+
+void kiir(const char ki_tb[][OP], bool mit)
+{
+ string io; 
+ if(mit) io=" alap ";
+ else io=" monogram ";
+ for(int i=0; i<SR; i++) {
+  cout << "\n A(z)" << io << "mátrix " << i+1 << ". eleme: "
+       << ki_tb[i]; }
+}
+
+/*** main.cpp ***/
+#include "Decl.hpp"
 
 int main() {
   char mgm[SR][OP];
@@ -369,64 +382,63 @@ int main() {
    { "Asimov, Isaac" },
    { "King, Stephen" } };
   cout << "\n A mátrix címe: " << szerzok
-       << "\n A mátrix 1. eleme: "
-       << szerzok[0] << endl; // szerzok[0]
-  kiir(szerzok,mgm,1); cout << endl;
-  kiir(mgm,mgm,0); cout << endl;
+       << "\n A mátrix 1. eleme: " << szerzok[0] << endl;
+  kiir(szerzok,1); cout << endl;
+  monogram(szerzok,mgm);
+  kiir(mgm,0); cout << endl;
   return 0;
 }
 /***************************************************************************************/
-// 8/3/S1 Mátrixok kezelése mutató aritmetikával/indirekcióval(közvetve)
+// 8/3/P1 Mátrixok kezelése mutató aritmetikás indirekcióval, 1D
+			// Funs.cpp cseréje
+			
+#include "Decl.hpp"
 
-void kiir(const char (*szk)[OP], char m[][OP], bool mit)
+void monogram(const char (*szk)[OP], char m[][OP])
 {
- int j; 
- char t;
- string io; 
- if(mit) io=" alap ";
- else io=" monogram ";
- for(int i=0; i<SR; i++) {
-  cout << "\n A(z)" << io << "mátrix " << i+1 << ". eleme: "
-       << *(szk+i); //szk, (*szk), (*szk)+i != *(szk+i)!!!
-  if(mit) { 
+  int j; 
+  char t;
+  for(int i=0; i<SR; i++) {
    m[i][0]=(*(szk+i))[0]; m[i][1]='.'; m[i][2]=' ';
    t='!';
    for(j=0; t!=' '; j++) { t=(*(szk+i))[j]; }
-   m[i][3]=(*(szk+i))[j]; m[i][4]='.'; m[i][5]='\0'; } }
+   m[i][3]=(*(szk+i))[j]; m[i][4]='.'; m[i][5]='\0';
+  } // külső for
 }
-/******************/
-// 8/3/S2 Mátrixok kezelése mutató aritmetikával/indirekcióval(közvetve)
 
-void kiir(const char (*szk)[OP], char m[][OP], bool mit)
+void kiir(const char (*ki_tb)[OP], bool mit)
 {
- int j; 
- char t;
  string io; 
  if(mit) io=" alap ";
  else io=" monogram ";
  for(int i=0; i<SR; i++) {
   cout << "\n A(z)" << io << "mátrix " << i+1 << ". eleme: "
-       << *(szk+i); //szk, (*szk), (*szk)+i != *(szk+i)!!!
-  if(mit) { 
+       << *(ki_tb+i); } //ki_tb, (*ki_tb), (*ki_tb)+i != *(ki_tb+i)!!!
+}
+/******************/
+// 8/3/P2 Mátrixok kezelése mutató aritmetikás indirekcióval, 2D
+			// monogram fgv. cseréje
+
+void monogram(const char (*szk)[OP], char m[][OP])
+{
+  int j; 
+  char t;
+  for(int i=0; i<SR; i++) {
    m[i][0]=*((*(szk+i))+0); m[i][1]='.'; m[i][2]=' ';
    t='!';
    for(j=0; t!=' '; j++) { t=*((*(szk+i))+j); }
-   m[i][3]=*((*(szk+i))+j); m[i][4]='.'; m[i][5]='\0'; } }
+   m[i][3]=*((*(szk+i))+j); m[i][4]='.'; m[i][5]='\0';
+  } // külső for
 }
 /******************/
-// 8/3/S3 Mátrixok kezelése mutató aritmetikával/indirekcióval(közvetve)
-
-void kiir(const char (*szk)[OP], char (*m)[OP], bool mit)
+// 8/3/P3 Mátrixok kezelése mutató aritmetikás indirekcióval, 2x2D
+			// monogram fgv. cseréje
+			
+void monogram(const char (*szk)[OP], char m[][OP])
 {
- int j; 
- char t;
- string io; 
- if(mit) io=" alap ";
- else io=" monogram ";
- for(int i=0; i<SR; i++) {
-  cout << "\n A(z)" << io << "mátrix " << i+1 << ". eleme: "
-       << *(szk+i); //szk, (*szk), (*szk)+i != *(szk+i)!!!
-  if(mit) { 
+  int j; 
+  char t;
+  for(int i=0; i<SR; i++) {
    *((*(m+i))+0)=*((*(szk+i))+0);
    *((*(m+i))+1)='.';
    *((*(m+i))+2)=' ';
@@ -434,35 +446,15 @@ void kiir(const char (*szk)[OP], char (*m)[OP], bool mit)
    for(j=0; t!=' '; j++) { t=*((*(szk+i))+j); }
    *((*(m+i))+3)=*((*(szk+i))+j);
    *((*(m+i))+4)='.';
-   *((*(m+i))+5)='\0'; } }
+   *((*(m+i))+5)='\0';
+  } // külső for
 }
 /***************************************************************************************/
-// 8/4 Mátrixok kezelése mutatókkal.
-//  Ez, a mutatóra mutató mutató, avagy a mutató tömb.
+// 8/3/P4 Mátrixok kezelése mutatókkal.
+			//  Ez, a mutatóra mutató mutató, avagy a mutató tömb.
+			// main.cpp cseréje
 
-#include<iostream>
-
-#define SR 4
-#define OP 20
-
-using namespace std;
-
-void kiir(const char szk[][OP], char m[][OP], bool mit)
-{
- int j; 
- char t;
- string io; 
- if(mit) io=" alap ";
- else io=" monogram ";
- for(int i=0; i<SR; i++) {
-  cout << "\n A(z)" << io << "mátrix " << i+1 << ". eleme: "
-       << szk[i];
-  if(mit) { 
-   m[i][0]=szk[i][0]; m[i][1]='.'; m[i][2]=' ';
-   t='!';
-   for(j=0; t!=' '; j++) { t=szk[i][j]; }
-   m[i][3]=szk[i][j]; m[i][4]='.'; m[i][5]='\0'; } }
-}
+#include "Decl.hpp"
 
 int main() {
   char mgm[SR][OP];
@@ -481,8 +473,9 @@ int main() {
   }
   cout << "\n A mátrix címe: " << szerzok
        << "\n A mátrix 1. eleme: " << (*szerzok) << endl;
-  kiir(szerzok,mgm,1); cout << endl;
-  kiir(mgm,mgm,0); cout << endl;
+  kiir(szerzok,1); cout << endl;
+  monogram(szerzok,mgm);
+  kiir(mgm,0); cout << endl;
   return 0;
 }
 /***********************/
@@ -498,13 +491,21 @@ int main() {
 /***************************************************************************************/
 // 8/5 Mátrixok kezelése dinamikusan
 
-
+/*** Decl.hpp ***/
+#pragma once
 #include<iostream>
 
 #define SR 4
 #define OP 20
 
 using namespace std;
+
+void monogram(const string*, string*);
+void kiir(const string*, bool);
+string* feltolt(const char (*a_b)[OP]);
+
+/*** Funs.cpp ***/
+#include "Decl.hpp"
 
 string* feltolt(const char (*a_b)[OP])
 {
@@ -513,24 +514,32 @@ string* feltolt(const char (*a_b)[OP])
   return szk;
 }
 
-string* kiir(const string* szk, string* m, bool mit)
+void monogram(const string* szk, string* m)
 {
- int j; 
- char t;
- string io /*, df="12345"*/; 
+  int j; 
+  char t;
+  //string def="12345"; 
+  for(int i=0; i<SR; i++) {
+   //m[i]=def;
+   m[i][0]=szk[i][0]; m[i][1]='.'; m[i][2]=' ';
+   t='!';
+   for(j=0; t!=' '; j++) { t=szk[i][j]; }
+   m[i][3]=szk[i][j]; m[i][4]='.';// m[i][5]='\0'; Nem kell!
+  } // külső for
+}
+
+void kiir(const string* ki_pt, bool mit)
+{
+ string io; 
  if(mit) io=" alap ";
  else io=" monogram ";
  for(int i=0; i<SR; i++) {
   cout << "\n A(z)" << io << "mátrix " << i+1 << ". eleme: "
-       << szk[i];
-  if(mit) {
-   //m[i]=df; // ??????
-   m[i][0]=szk[i][0]; m[i][1]='.'; m[i][2]=' ';
-   t='!';
-   for(j=0; t!=' '; j++) { t=szk[i][j]; }
-   m[i][3]=szk[i][j]; m[i][4]='.'; /*m[i][5]='\0';*/ } }
- return m;
+       << ki_pt[i]; }
 }
+
+/*** main.cpp ***/
+#include "Decl.hpp"
 
 int main() {
   char adat_b[SR][OP]={
@@ -538,8 +547,7 @@ int main() {
    { "Tolkien, John R. R." },
    { "Asimov, Isaac" },
    { "King, Stephen" } };
-  string* mgm=new string[SR];
-	string* szerzok;
+  string* szerzok;
   szerzok=feltolt(adat_b);
   for(int i=0; i<SR; i++) {
     cout << "\n A(z) " << i+1 << ". elem címe: "
@@ -548,9 +556,12 @@ int main() {
          << szerzok[i] << endl; }
   cout << "\n A mátrix címe: " << szerzok
        << "\n A mátrix 1. eleme: " << (*szerzok) << endl;
-  mgm=kiir(szerzok,mgm,1); cout << endl;
-  kiir(mgm,mgm,0); cout << endl;
-  delete [] mgm;
-  delete [] szerzok;
+  kiir(szerzok,1); cout << endl;
+  string* mgm=new string[SR];
+  monogram(szerzok,mgm);
+  kiir(mgm,0); cout << endl;
+  delete [] mgm; mgm=0;
+  delete [] szerzok; szerzok=0;
   return 0;
 }
+/***************************************************************************************/
