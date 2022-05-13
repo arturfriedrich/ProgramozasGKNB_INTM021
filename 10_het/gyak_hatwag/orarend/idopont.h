@@ -5,4 +5,4 @@ struct idopont {
     int perc;
 };
 
-int hasonlit(const idopont*, const idopont*)
+int hasonlit(const idopont*, const idopont*);

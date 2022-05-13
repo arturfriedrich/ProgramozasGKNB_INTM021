@@ -6,7 +6,7 @@ void beolvas(datum* d) {
     cout << "Nap: "; cin >> d -> nap;
 }
 
-void kiir(datum* d) {
+void kiir(const datum* d) {
     cout << d -> ev << "." << d -> ho << "." << d -> nap;
 }
 

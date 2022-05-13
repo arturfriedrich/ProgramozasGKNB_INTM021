@@ -1,9 +1,8 @@
 #pragma once
 #include <iostream>
-#include <string.h>
 #include "idopont.h"
 
-using std::string;
+using namespace std;
 
 struct tanora {
     string nev;
@@ -11,4 +10,4 @@ struct tanora {
     int vege;
 };
 
-bool utkozik(const tanora*, const tanora*)
+bool utkozik(const tanora*, const tanora*);
