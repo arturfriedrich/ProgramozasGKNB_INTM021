@@ -4,6 +4,7 @@ Kijavítandó feladatok:
 - 3_het/gyak_hatwag/shift.cpp
 - 7. heti videok és .cpp fileok átnevezése feladatnevek szerint (hülye neveik vannak ki kell találni!)
 - Próba vizsgák átnézése, feltöltése (vizsgak_all folder, de milyen formában?) [videotorium]
+- Hatwagner 10. heti gyakorlat 2. feladat
 
 TimeLine:
             gyak_horzsol    gyak_hatwag     Moodle Gyak Óra szám
