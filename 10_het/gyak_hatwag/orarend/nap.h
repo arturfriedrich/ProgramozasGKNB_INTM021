@@ -1,5 +1,6 @@
 #pragma once
 
 struct nap {
-    int s[];
+    int n;
+    int *arr = new int(n);
 };
