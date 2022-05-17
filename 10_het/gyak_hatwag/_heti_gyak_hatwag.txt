@@ -7,8 +7,9 @@ Header fájlok, több forrásfájl linkelése
 - Minden struktúra és a hozzátartozó (nem tag-) függvények deklarációja külön headerben, a függvények implementációja cpp-ben.
 - Mindenhol csak a szükséges header fájlok include-olása.
 - Megmutatni, hogy hogy kell szövegfájlból bemásolni a bemenetet parancssorba, hogy ne kelljen sokat gépelni.
-Cégek
 
+
+Cégek
 - Struktúrák és a hozzátartozó függvények
     - Dátum
         - Struktúratagok:

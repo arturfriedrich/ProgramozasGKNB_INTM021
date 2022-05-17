@@ -7,20 +7,38 @@ Kijavítandó feladatok:
 - Hatwagner 10. heti gyakorlat 2. feladat
 
 TimeLine:
-            gyak_horzsol    gyak_hatwag     Moodle Gyak Óra szám
-1.hét           x                                   -
-2.hét           x                                   -
-3.hét           x                                   -
-4.hét                           x               3. heti tömbös feladatok
-5.hét                           x               3. heti shift jobbra/ballra, 4. heti szinusz feladat
-6.hét                           x               4. heti rendszám feladat
-7.hét                           x               4. órai rendszám fgvnyen alapuló bef, //5. óra skipped!!
-8.hét                           x               6. órai struktúra tömbök, structok és tulajdonság mezők létrehozása
-9.hét                           x               7. órai mutatók használata!
-10.hét                          x               8. heti anyag                 
-11.hét                          x               9. heti anyag, Pascal haromszog, rejtjelezés
-12.hét                  elmarad, csoportok
-                        syncronba kerülnek
-13.hét
-14.hét
+Óraszám               gyak_horzsol    gyak_hatwag   Moodle Gyak Óra szám
+    1       1.hét           x                             -
+    2       2.hét           x                             -
+    3       3.hét           x                             -
+    4       4.hét                           x        3. heti tömbös feladatok
+    5       5.hét                           x        3. heti shift jobbra/ballra, 4. heti szinusz feladat
+    6       6.hét                           x        4. heti rendszám feladat
+    7       7.hét                           x        4. órai rendszám fgvnyen alapuló bef, //5. óra skipped!!
+    8       8.hét                           x        6. órai struktúra tömbök, structok és tulajdonság mezők létrehozása
+    9       9.hét                           x        7. órai mutatók használata!
+    10      10.hét                          x        8. heti anyag                 
+    11      11.hét                          x        9. heti anyag, Pascal haromszog, rejtjelezés
+            12.hét                      elmaradt     
+    12      13.hét                       MISSED      !!10. és 11. heti anyagok egyben lettek leadva!! Ezek: 10: Több fileból álló projektek, header guard, include és kapcsoló elem szekrezet, 11: láncolt listák!
+    13      14.hét                          x        12. heti anyag, fastruktúra
 
+ 
+To-Do:
+    Heti hatwagner gyak leírásoknál található feladatok felvitele a gyak_hatwag mappaba
+    majd azokat becímkézni melyik video tartozik hozzá!
+
+    10. heti gyak videot kettévágva felrakni part1 és part2 neven!
+
+ Todo Artúr:
+    1.
+        Kérlek a horzsol 9db .txt filenak nyiss egy _horzsol_gyak_all mappát amibe berakod azokat, majd
+        egy olyan TimeLine táblázattal mint ami efelett van kérlek szedd szét, hogy melyik file tartalmát
+        pl: 5/6 (5.hét 6. feladat)-ot a 11. héten vettétek, és az tartalmilag oda tartozik!
+        -> valszeg az egyik héten vett anyag nagyjából egyezik a szelearninges haladási tematikával, találni
+            kicsit elmarad attól...
+        Ha ez meglenne, akkor úgy nézne ki, hogy pl a 9.heti .txt-t szétszeded mondjuk 2db -ra ami lenne
+        pl: horzsol_gyak_12.txt és horzsol_gyak_13.txt
+
+    2.
+        Kérlek rakd a repot privátra, majd elmondom miért!
