@@ -41,4 +41,4 @@ To-Do:
         pl: horzsol_gyak_12.txt és horzsol_gyak_13.txt
 
     2.
-        Kérlek rakd a repot privátra, majd elmondom miért!
+        Kérlek rakd a repot privátra, majd elmondom miért! - Done
