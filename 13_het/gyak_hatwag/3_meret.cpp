@@ -11,7 +11,7 @@ int main() {
     ifstream f(NEV);
     if ( f.is_open() ) {
         f.seekg(0, ios_base::end);                                      // pozícionálja a mutatót a fájl végére
-        streampos vege = f.tellg();
+        streampos vege = f.tellg();                                     // lekérdezzük a pozíciónkat így tudni fogjuk mekkora a fájl
         cout << "A fájl mérete " << vege << " bájt." << endl;
         f.close();
     } else {
