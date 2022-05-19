@@ -1,0 +1,485 @@
+Tartalom:
+1. hét
+    - változók, literálok
+    - magas szintű ki és bemenetek
+    - egyszerű vezérlési szerkezetek
+2. hét
+    - hátultesztelő ciklusok
+    - összetettebb alkalmazási minták
+    - karakterláncok
+3. hét
+    - egydimenziós tömbök
+    - szimbolikus állandók
+4. hét
+    - ciklusszervezési megoldások
+    - többirányú szelekció
+    - lebegőpontos adatok használata
+    - explicit és implicit típuskonverzió
+    - matematikai függvénykönyvtár fontosabb elemei
+5. hét
+    - egyszerű függvények definiálása
+6. hét
+    - struktúrák, struktúratömbök
+    - több érték visszaadása függvényekből
+7. hét
+    - kétdimenziós tömbök
+    - érték szerinti átadás
+    - tömbök paraméterkénti átadása függvényeknek
+    - mutatók, cím szerinti paraméter-átadás
+    - mutató operátorok
+8. hét
+    - dinamikus memóriafoglalás
+    - dinamikus vektorok
+    - nyíl operátor
+9. hét
+    - kétdimenziós dinamikus tömbök
+10. hét
+    - több forrásfájlból álló projektek
+    - függvények deklarációja és definíciója
+    - header guard
+    - #include direktíva
+    - kapcsolódó-szerkesztés menete
+11. hét
+    - láncolt listák
+12. hét
+    - fastruktúra
+    - rekurzió
+13. hét
+    - magas szintű I/O
+    - parancssori argumentumok
+
+
+
+1. hét
+- Projekt létrehozása
+- Melyik panelen mi van, mit csinál? Elrendezés testreszabása (CodeBlocks Perspectives)
+- Fordítás, futtatás, debug mód
+- Hello world! (cout, string literál kiíratása)
+
+Közös feladat
+- Kérjünk be egy számot (int) és írjuk ki a kétszeresét
+
+Önálló feladat
+- Kérjünk be két számot (int) és írjuk ki az összegüket
+- Írjuk ki a szorzatukat is
+- Írjuk ki a szorzat és az összeg különbségét
+
+Közös feladat
+- Kérjünk be egy számot és írjuk ki az abszolút értékét (Többféle kiíratás megmutatása, pl. értékadással, anélkül, -x, -1*x)
+- Ha a szám páros, írjuk ki a felét
+- Nézzük meg, páratlan szám esetén mi lesz a 2-vel való osztás eredménye
+
+Önálló feladat
+- Kérjünk be két számot, ha az első nagyobb, írjuk ki a különbségüket
+- Ha mindkét szám kisebb, mint 10, akkor írjuk ki a szorzatukat is
+
+Közös feladat
+- Írjuk ki a számokat 1-től 100-ig
+- Kérjük be N értékét, majd írjuk ki a számokat 1-től N-ig
+- Ellenőrizzük, hogy N>1
+- A végén írjuk ki a számok összegét
+- Csak a páros számokat írjuk ki
+- Opcionális feladat: kérjünk be két számot, majd soroljuk fel a köztük lévő számokat, ha az első szám nagyobb, akkor csökkenő sorrendben
+
+Önálló feladat
+- Kérjük be N értékét, majd írjuk ki a faktoriálisát
+- Fizzbuzz: Koncentrációs játék, ahol 1-től kezdve soroljuk a számokat, és minden 3-mal osztható szám helyett azt kell mondani, hogy Fizz, az 5-tel oszthatók helyett, hogy Buzz. Ha 3-mal és 5-tel is osztható a szám, akkor azt kell mondani, hogy FizzBuzz. Írjunk programot, ami ilyen módon számol 1-től 100-ig!
+- Opcionális feladat: Kérjünk be egy számot, és mondjuk meg róla, hogy prímszám-e
+---------------------------------------------------------------------------------------------------
+
+
+2. hét
+Önálló feladat
+- Kérjünk be két számot, majd mondjuk meg, hogy az első a nagyobb, a második, vagy egyenlők!
+
+Közös feladat
+- A fenti feladatot oldjuk meg közösen else, else if használatával, különböző módokon
+- Kérjünk be számokat, amíg páratlan számot nem kapunk, és a párosoknak mindig írjuk ki a felét
+
+Önálló feladat
+Kérjünk be számokat, míg egymás után kétszer ugyanazt a számot nem kapjuk
+- A végén írjuk ki, hogy hány számot olvastunk be
+- És hány páros számot olvastunk be?
+
+Közös feladat
+- Kérjünk egy számot, rajzoljunk ennyi karakter széles négyzetet a képernyőre
+- Rajzoljuk be a két átlót is
+
+Önálló feladat
+- Magasság bekérése után lépcső kirajzolása (i. sorban i db '*')
+- Lépcső függőlegesen tükrözve (jobbra igazítva a csillagokat)
+
+Közös feladat
+Menü program, szám megadásával adható ki a parancs (érvénytelen számra kilép)
+    1. Összeadás (bekér két számot és kiírja az összeget)
+    2. Szorzás
+    3. Hatványozás
+    4. Számtani sorozat a0 és d alapján n elem (önálló feladat, a három paramétert be kell kérni)
+
+Megjegyzés
+
+Számtani sorozatoknak nevezzük azokat a sorozatokat, amelyekben (a másodiktól kezdve) bármelyik tag és az azt megelőző tag különbsége állandó.
+Ezt az állandó különbséget a sorozat differenciájának nevezzük, és általában d-vel jelöljük.
+Formulával: 𝑎1;𝑎𝑛=𝑎𝑛−1+𝑑, ahol n > 1.
+---------------------------------------------------------------------------------------------------
+
+
+3.hét
+Önálló feladat
+- Olvassunk be 10 számot, majd írjuk ki az átlagukat (ehhez még nem kell tömb)
+
+Közös feladat (előző folyt.)
+- Olvassunk be 10 számot, majd írjuk ki az átlagukat (ehhez még nem kell tömb)
+- Írjuk ki az átlag alatti értékeket (itt már muszáj tömbbe eltárolni a számokat)
+
+Önálló feladat
+- Olvassuk be két 3-dimenziós vektor koordinátáit
+- Írjuk ki a vektorok összegét, különbségét
+- A dimenzió legyen #define-nal megadva
+
+Közös feladat
+- Olvassunk be 10 számot egy tömbbe
+- Kérjünk be további számokat, és mondjuk meg, hányszor szerepeltek a 10 elemű tömbben
+- Ha egyszer sem szerepelt, álljon le a program
+
+Önálló feladat
+- Olvassunk be 10 számot egy tömbbe!
+- Kérjünk be két indexet, és cseréljük fel a megfelelő indexű elemeket, majd írjuk ki a tömböt!
+- Fejlesszük ezt tovább úgy, hogy nem indexet, hanem sorszámot kérünk a felhasználótól! A sorszám az [1, 10] zárt intervallumba essen, hogy kényelmesebb legyen a program használata a felhasználónak!
+- Ismét fejlesszük tovább a programot úgy, hogy addig ismételjük a cseréket, amíg érvénytelen sorszámot (<1 vagy >10) nem kapunk !
+
+Önálló feladat
+- Olvassunk be 5 számot egy tömbbe
+- Kérjünk be további számokat, és ennyivel shifteljük jobbra az elemeket, majd írjuk ki a tömböt
+- Negatív szám esetén balra shifteljen, és 5-nél nagyobbra is működjön
+- Addig ismételjük, amíg nem 0-t kapunk
+---------------------------------------------------------------------------------------------------
+
+
+4. hét
+Szinusz görbe ascii art stílusban
+- Vizualizálja karakteres felületen a szinusz függvényt! Ha úgy könnyebb, az x tengely állhat függőlegesen is, azaz 90 fokkal el lehet forgatni az ábrát.
+
+Másodfokú egyenlet
+- Olvassunk be `a` `b` és `c` együtthatókat szabvány bemenetről
+- Amennyiben az értékek alapján alkotott másodfokú egyenletnek (𝑎𝑥2+𝑏𝑥+𝑐=0) van valós gyöke írja ki az eredményt, különben pedig `Az egyenletenek nincs valos gyoke` szöveget.
+
+Megjegyzés: Az egyenletnek akkor van valós gyöke, ha a négyzetgyökjel alatt álló diszkrimináns nemnegatív.
+
+Jelezzük ki a megoldást
+- Segítség: a 4𝑥2+8𝑥−5=0 egyenlet megoldásai: 𝑥1=0.5,𝑥2=−2.5
+- Plusz feladat: amennyiben a diszkrimináns 0 és csak 1 megoldás van, akkor ezt külön jelezze!
+
+Rendszám ellenőrző
+- Írjon C++ programot, amely egy string validációját végzi el. A formátum egyezzen meg a leggyakoribb magyar rendszámtábla formátumával. Eszerint 7 karakter hosszúságú legyen, ennek elején három (nagy vagy kis) betű után egy kötőjel és végül három szám következzen!
+- A program `k` betűre lépjen ki!
+- Plusz feladat: Fejlessze tovább az előző feladatot, úgy, hogy a 3 betű, kötőjel, 3 szám mellett a 3 betű, három szám és a 3 betű, space, 3 szám formátumot is fogadja el. Pl. `SZE-001`, `SZE 001`, `SZE001`
+---------------------------------------------------------------------------------------------------
+
+
+5. hét
+Összeadás függvénnyel
+- Írjon függvényt, amely két számot vár paraméterül és eredményül visszaadja a két szám összegét!
+- Írjon programot, amely két számot olvas be mindaddig, míg azok összege nem osztható 7-tel! A feladat megoldásához használja fel az előzőleg megírt függvény!
+(Felhasznált forrás: PE-MIK C Programozás I feladatgyűjtemény)
+   
+Nagyobb szám függvénnyel
+- Írjon függvényt, amely két számot vár paraméterül és eredményül `1`-et ad vissza, ha az első szám nagyobb a másodiknál, `-1`-et, ha a második nagyobb az elsőnél, `0`-át, ha egyenlők!
+- Olvasson be egy hételemű tömböt!
+- Írassa ki a képernyőre azon szomszédos elemeket, amelyekre igaz, hogy az első nagyobb a másodiknál!
+(Felhasznált forrás: PE-MIK C Programozás I feladatgyűjtemény)
+
+  
+Legnagyobb szám függvénnyel
+- Írjon függvényt, amely két számot vár paraméterül és eredményül visszaadja a két szám maximumát!
+- Olvasson be egy számot, amelyet eltárol jelenlegi maximális értékként!
+- Olvasson be számokat addig, míg nem adunk meg háromszor is nagyobb számot az előzőeknél! A nagyobb számot mindig tárolja el jelenlegi maximumként!
+- A feladat megoldásához használja fel az előzőleg megírt függvényt!
+(Felhasznált forrás: PE-MIK C Programozás I feladatgyűjtemény)
+---------------------------------------------------------------------------------------------------
+
+
+6. hét
+Struktúrák, struktúratömb
+
+- Készítsen programot, amely személyek születési évét, hónapját, napját képes tárolni, valamint a személy lakhelyének fővárostól való távolságát km-ben (float)!
+- Olvassa be 5 személy adatait a standard bemenetről!
+- Rendezze a tömböt a fővárostól való távolságok szerinti csökkenő sorrendbe, majd jelenítse meg az elemeit!
+- Rendezze a tömböt a személyek kora szerinti növekvő sorrendbe, majd jelenítse meg az elemeit!
+(Felhasznált forrás: PE-MIK C Programozás I feladatgyűjtemény)
+ 
+ 
+Több érték visszaadása függvényből:
+- Készítsen programot, amely bekéri a standard bemenetről hallgatók vezetéknevét, keresztnevét, neptun kódját, egy tantárgy nevét és a tárgyból írt 4 db ZH eredményeit!
+- Az adatok bekérését végezze el egy erre a célra tervezett függvény, amely több értéket képes vissza adni!
+- Az átlag számítását szintén egy függvény segítségével végezze el, ahol paraméterként az előző pontban meghatározott függvény visszatérési értékei szolgáljanak!
+---------------------------------------------------------------------------------------------------
+
+
+7. hét
+Mutatók, bevezető feladat
+- Hozzon létre egy egész számot tároló változót és hozzá egy mutatót!
+- Olvassa be a szám értékét a mutatón keresztül!
+- Írassa ki a képernyőre a szám értékét és memóriacímét az első változó segítségével!
+- Írassa ki a képernyőre a szám értékét és memóriacímét a mutató változó segítségével!
+- Írassa ki a képernyőre a mutató címét!
+ 
+Mutatók, tömbök
+- Olvasson be egy hatelemű tömböt, amely egész számokat tárol és töltse fel értékekkel!
+- Hozzon létre egy 10 elemű tömböt, amely mutatókat tárol!
+- Olvasson be tíz számot a képernyőről! Ha a szám szerepel a hatelemű tömbben, tárolja el annak a címét, ellenkező esetben tároljon el egy nullaértékű címet!
+- Jelenítse meg a 10 elemű tömb által mutatott értékeket és hozzájuk tartozó memóriacímeket!
+ 
+Mutatók, struktúrák
+- Készítsen egy struktúrát, amely koordinátákat tárol (x, y, z)!
+- Hozzon létre egy tízelemű tömböt, amely koordinátákat tárol!
+- Egy mutató segítségével töltse fel a tömböt értékekkel!
+- A mutatón keresztül jelenítse meg a tömb elemeit!
+ 
+Mutatók, struktúrák és függvények
+- Készítsen egy koordináta struktúrát!
+- Készítsen egy háromszög struktúrát, amely három koordinátát tárol!
+- Írjon függvényt, amely egy háromszög struktúra címét kapja meg és feltölti azt billentyűzetről olvasott értékekkel!
+- Írjon függvényt, amely egy háromszög struktúra címét kapja és megjeleníti azt a képernyőn!
+- Olvasson be egy két elemű tömbbe háromszögeket az előbb megírt függvény segítségével!
+- Írassa ki a tömb elemeit!
+---------------------------------------------------------------------------------------------------
+
+
+8. hét
+Bevezetés: Változók dinamikus foglalása
+
+Hozzon létre egy egész számot címző mutatót!
+Foglalja le az egész számnak szükséges helyet!
+Olvasson be egy számot a memóriaterületre!
+Írassa ki a képernyőre a beolvasott számot!
+Szabadítsa fel a használt memóriaterületet!
+
+Tömbök dinamikus foglalása
+
+Olvasson be egy egész számot billentyűzetről!
+Foglaljon helyet annyi egész számnak, amennyi az előzőleg beolvasott szám értéke!
+Olvasson be és tároljon el annyi egész számot, amennyi az előzőleg beolvasott szám értéke!
+Írassa ki a beolvasott számokat!
+Szabadítsa fel a lefoglalt memóriaterületet!
+
+Dinamikus struktúra helyfoglalás
+- Készítsen egy koordinátát tároló struktúrát!
+- Írjon függvényt, amely koordinátát olvas be billentyűzetről!
+- Foglaljon dinamikus memóriát és jelenítse meg a tárolt koordinátákat!
+- Szabadítsa fel a lefoglalt memóriaterületet!
+
+C típusú karaktertömbök foglalása:
+- Olvasson be egy legfeljebb 100 karakter hosszú szöveget!
+- Hozzon létre egy a szöveg hosszának megfelelő méretű tömböt!
+- Másolja át a szöveget a számára létrehozott tömbbe!
+- Írassa ki a szöveget!
+- Szabadítsa fel a lefoglalt memóriaterületet!
+
+Ismeretlen számú érték előfordulásának megszámlálása
+- Olvasson be egész számokat, amíg 0-t nem kap, majd mondja meg, melyik érték hányszor szerepelt a bemeneten!
+- Első szint: Az értékek egy ismert, kis intervallumba eshetnek.
+- Második szint: Nem ismert az értékek intervalluma, de csak 100-féle érték fordulhat elő.
+- Harmadik szint: Tetszőleges különböző érték előfordulhat.
+- Negyedik szint: Az érték-darabszám párokat rendezve tárolja, és bináris kereséssel keresse meg az aktuális elemet!
+---------------------------------------------------------------------------------------------------
+
+
+9.hét
+Pascal-háromszög
+- Kérje be a sorok számát!
+- Hozzon létre dinamikusan egy háromszög-mátrixot a tároláshoz (az első sor 1 hosszú, majd egyesével növekszik)!
+- Számolja ki az egyes elemeket: minden sor szélein 1, a köztes elemek a fölötte lévő két elem összegei!
+- Jelenítse meg a háromszög-mátrixot (a sorokat nem kell középre igazítani)!
+- Szabadítsa fel a használt memóriaterületet!
+
+ 
+Vigenére-rejtjelezés
+- A Vigenére-rejtjel egy olyan titkosítási módszer, amely egy kódszó betűi alapján tolja el az egyes karaktereket az ábécében (a Caesar-kód továbbfejlesztése).
+- Pl. ha a kódszó CODE, akkor minden k*4+1-edik betűt a C betű ábécé-indexével tol el (2), minden k*4+2-ik betűt az O indexével, stb.
+- A kézi kódoláshoz a tabula recta nevű táblázatot használták, ahol minden oszlopban az abc szerepel egyre nagyobb eltolással, így a kódolandó betű sorában a kódszó jelenlegi betűjéhez tartozó oszlopában található a kódolt betű.
+- A feladat egy olyan program megírása, ami bekér egy kódszót, majd megjeleníti a kódszó betűihez tartozó oszlopokat.
+- A táblázatot egy dinamikusan lefoglalt mátrixban tárolja el!
+- Szabadítsa fel a lefoglalt memóriaterületet!
+- Feladat folytatása: A táblázat megjelenítése után üres sorig kérjen be sorokat, és írja ki a kódolt szöveget a táblázat alapján!
+- A program ne tegyen különbséget a kis- és nagybetűk között és hagyja figyelmen kívül a fehér karaktereket!
+---------------------------------------------------------------------------------------------------
+
+
+10.hét
+Header fájlok, több forrásfájl linkelése
+- 1-2 IDÉ-ben megmutatni, hogy kell forrásfájlokat létrehozni / hozzáadni egy projekthez.
+- Függvények deklarációja vs. definíciója
+- Include működésének bemutatása
+- Header guard (miért? hogyan? ismétlés a kapcsolódó makrókról)
+- Alábbi két feladatból valamelyiket közösen megcsinálni, a másikat önálló munkában!
+- Minden struktúra és a hozzátartozó (nem tag-) függvények deklarációja külön headerben, a függvények implementációja cpp-ben.
+- Mindenhol csak a szükséges header fájlok include-olása.
+- Megmutatni, hogy hogy kell szövegfájlból bemásolni a bemenetet parancssorba, hogy ne kelljen sokat gépelni.
+
+
+Cégek
+- Struktúrák és a hozzátartozó függvények
+    - Dátum
+        - Struktúratagok:
+            - Év
+            - Hónap
+            - Nap
+        - Függvények:
+            - Dátum beolvasása
+            - Dátum kiírása
+            - Két dátum összehasonlítása (-/0/+)
+    - Telephely
+        - Struktúratagok:
+            - Helység neve
+            - Alapítás dátuma
+            - Utolsó év bevétele (egész)
+        - Függvények:
+            - Telephely beolvasása
+            - Kiírása
+    - Cég
+        - Struktúratagok:
+            - Cégnév (szóközökkel)
+            - Alapítás dátuma
+            - Telephelyek tömbje (dinamikusan foglalva, bemenetről kapott méretűre)
+            - Telephelyek száma
+        - Függvények:
+            - Cég adatainak beolvasása
+            - Éves bevétel kiszámítása (telephelyek adatait összesíti)
+            - Kiírása
+            - Törlése (dinamikusan foglalt memória felszabadítása)
+- main.cpp-ben megvalósítandó program
+    - 5 cég adatainak beolvasása
+    - A legrégebben alapított cég adatainak kiírása (név, dátum, bevétel)
+    - Helységnév bekérése után az ott lévő telephelyek adatainak kiírása (bármely cégekből)
+
+ 
+Órarend-kezelő
+- Struktúrák és a hozzátartozó függvények
+    - Személy
+        - Név (szóközökkel)
+        - Órarend: 5-elemű Nap-tömb
+    - Nap
+        - Tanórák száma
+        - Tanórák (dinamikus tömb)
+    - Tanóra
+        - Tárgy neve (szóközökkel)
+        - Kezdő időpont
+        - Vége
+        - `bool utkozik(Ora, Idopont)` *Időpont-összehasonlító fgv használatával*
+    - Időpont
+        - Óra
+        - Perc
+        - Összehasonlító függvény (-1/0/1)
+- main.cpp-ben megvalósítandó program
+    - 4 személy adatainak beolvasása
+    - Nap (index) bekérése után megmondani, kinek van a legtöbb tanórája aznap (hossztól függetlenül)
+    - Nap és időpont bekérése után kilistázni, hogy kinek milyen órája (órái) vannak akkor vagy épp szabad-e
+---------------------------------------------------------------------------------------------------
+
+
+11. hét
+1. Láncolt lista feltöltés, kiíratás
+
+Írjon programot, amely egy tömb elemeivel láncolt listát készít!
+A tömb utolsó eleme legyen `-1`, ez már ne kerüljön a listába! Az elemeket szúrja be a lista elejére! Figyeljük meg, hogy így a lista fordított lesz a tömbhöz képest!
+Végül jelezzük ki az egyes elemeket rendre!
+
+2. Láncolt lista beszúrás, felszabadítás
+
+Az előző feladatot bővítse tovább úgy, hogy olyan függvényeket ír, melyekkel a lista elejére és végére beszúrást szemléltethetjük! Próbálja is ki különböző értékekkel a függvényeket!
+Szabadítsa fel a lefoglalt memóriát!
+
+
+3. Láncolt lista törlés adott feltételre
+
+Generáljunk monogramokat, életkort, ebből születési évet, magasságot minden láncolt lista elemnek, majd listázzuk!
+A generált listából töröljük a 2000 után született személyeket, majd listázzuk ki ezt is!
+
+
+4. Láncolt lista megfordítása
+
+Fordítsunk meg egy listát az elemei átláncolása által! Jelezzük ki előző program listáját eredeti sorrendjében (és ezáltal az adatokat eredeti sorrendjükben), továbbá a megfordítottat is!
+Mindig a lista elejéről veszünk el egy elemet, majd a megfordított lista elejére betesszük azt, így a lista megfordul. Végül az eredeti lista elfogy, amint ez megtörténik, a megfordított lista kész.
+
+
+5. Láncolt lista rendezése
+
+Rendezzük az előző feladat listáját monogram / életkor / magasság szerinti növekvő sorrendbe!
+---------------------------------------------------------------------------------------------------
+
+
+12. hét
+1. Általános fa struktúra:
+
+- Írjunk egy 4 csomópontos fát létrehozó programot!
+- Írjunk programot amiben létrehozunk egy legalább 3 elemet tartalmazó egyszerű fát, majd a végén írjuk ki a levelek 
+    értékét! Írjunk függvényt a levelek feltöltésére!
+
+[1-es video itt]
+
+
+
+2. Bináris fa:
+
+Definiáljunk típust a lent megadott adatokat tartalmazó fákhoz!
+    Bináris fa, amely szavakat és azok előfordulásainak számát tárolja.
+    Bináris fa, amely tetszőlegesen hosszú neveket és hozzájuk tartozó telefonszámokat tárol. 
+        (Vigyázat, a telefonszámhoz nem elég egy egész szám, hiába van szám a nevében!)
+
+    Morse kódokat akarunk gyorsan feldolgozni. A kétféle bejövő jel TI és TÁ. Egy bináris fában ezt könnyen tárolhatjuk,
+    a bejövő jeltől függően megyünk a fában balra (TI) vagy jobbra (TÁ); ha vége van a jelsorozatnak, akkor pedig az 
+    adott csomópontban tárolt betűt kiolvassuk.
+
+Írjon logikai függvényt, amely egy paraméterként megkapott, egészeket tartalmazó, szigorú értelemben vett bináris fáról eldönti, hogy tökéletesen kiegyensúlyozott-e!
+
+[2-es video itt]
+
+Írjon egy "eljárást", amely egy paraméterként megkapott, karaktereket tartalmazó bináris fában a kisbetűket nagybetűre cseréli! 
+
+
+
+3.Rekurzió 
+
+- A matematikában egy n nemnegatív egész szám faktoriálisának az n-nél kisebb vagy egyenlő pozitív egész számok 
+  szorzatát nevezzük. Jelölése: n!, amit „n faktoriális”-nak vagy „n faktor”-nak olvasunk ki. Írjon programot, amely 
+  képes a faktoriális kiszámítására!
+
+- A Fibonacci-számok a matematikában az egyik legismertebb másodrendben rekurzív sorozat elemei. A nulladik eleme 0,
+  az első eleme 1, a további elemeket az előző kettő összegeként kapjuk. Írjon programot amely  kiszámolja egy adott
+  szám Fibonacci értékét!
+
+[3-as video itt]
+---------------------------------------------------------------------------------------------------
+
+
+13. hét
+1. Fájlkezelés:
+    Írjunk egy programot ami létrehoz egy elsofajl nevű txt fájlt, és beleírja a következő szöveget:
+        - Ezt a fajlt c++ nyelven irt programmal hoztam létre!
+        - Juppi!    
+        - Hello Világ!
+
+[1-es video itt]
+
+    Írjunk egy programot, amely  egy szövegfájlból beolvassa az összes sort, és a 
+            szabvány kimeneten megjeleníti a tartalmát!
+
+[2-es video itt]
+
+    Írjon programot, amely meghatározza egy adott fájl méretét! Az eredményt jelenítse meg a képernyőn!
+
+[3-as video itt]
+
+    Írjon programot, ami egy bináris fájl tartalmát betölti a memóriába!
+
+[4-es video itt]
+
+
+
+2. Parancssori paraméterek:
+    Készítsen programot, mely eldönti az indító parancssorban megadott azonosítójú fájlról, hogy ASCII kódú 
+    szövegfájl-e, vagy bináris fájl-e! Ha parancssori paraméter nélkül futtatják a programot, akkor ismertesse a 
+    képernyőn a használatát!
+
+[5-ös video itt]
