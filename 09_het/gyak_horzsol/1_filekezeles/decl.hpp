@@ -2,7 +2,7 @@
 #include<iostream>
 #include<fstream>  // ifstream és ofstream osztályokhoz
 
-#define SR 4
+#define SR 5
 #define OP 20
 
 using namespace std;
