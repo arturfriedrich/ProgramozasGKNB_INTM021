@@ -41,13 +41,3 @@ int main() {
 
     return 0;
 }
-
-
-/* 
-- fajl ellenorzese
-- soronkenti elemek eltarolasa dinamikus tombbe
-- tomb hossza szimbolikus
-- terulet meghatarozasa
-- csak a 2k es 8k kozottiek kiirasa
-- visszateresi ertek a megfelelo haromszogek szamtani atlaga
-*/
