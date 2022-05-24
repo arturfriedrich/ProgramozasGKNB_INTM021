@@ -26,7 +26,3 @@ Prs max: 8
 Szum: 39
 Prtln min: -1
 Prs max: 8
-
-Goals:
-- adott helyre csak megfelelő értéket lehet beírni
-- minimum és maximum meghatározása
