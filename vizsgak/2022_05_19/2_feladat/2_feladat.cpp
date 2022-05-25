@@ -8,18 +8,18 @@ using namespace std;
 int beker(int be_tb[], int *min, int *max) {
     int szum = 0;
     do {                                                                                            // első elem ellenőrzése
-        cout << "1. szám: ";
+        // cout << "1. szám: ";
         cin >> be_tb[0];
     } while ( be_tb[0] != 0 );
     for ( int i=1; i<DB; i++ ) {
         if ( i%2 == 0 ) {
             do {                                                                                    // csak akkor fogadja el ha páros
-                cout << i+1 << ". szám: ";
+                // cout << i+1 << ". szám: ";
                 cin >> be_tb[i];
             } while ( be_tb[i]%2 != 0 );
         } else {
             do {                                                                                    // csak akkor fogadja el ha páratlan
-                cout << i+1 << ". szám: ";
+                // cout << i+1 << ". szám: ";
                 cin >> be_tb[i];
             } while ( be_tb[i]%2 == 0 );
         }
