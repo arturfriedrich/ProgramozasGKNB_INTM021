@@ -4,8 +4,9 @@
 using namespace std;
 
 string szokozkiszed(string &s) {
-    s.erase(remove(s.begin(), s.end(), ' '), s.end());
-    cout << s;
+    string holder = s;
+    holder.erase(remove(holder.begin(), holder.end(), ' '), holder.end());
+    cout << holder;
 
     return "";
 }
