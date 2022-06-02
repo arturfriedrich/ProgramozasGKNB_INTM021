@@ -1,0 +1,12 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+double terulet(double a) {
+    return 0.25*(sqrt(3*a*a));
+}
+
+int main() {
+  std::cout << std::fixed << std::setprecision(3) << terulet(2.);
+}
