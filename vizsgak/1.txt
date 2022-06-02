@@ -10,3 +10,64 @@ double terulet(double a) {
 int main() {
   std::cout << std::fixed << std::setprecision(3) << terulet(2.);
 }
+
+
+
+
+#include <iostream>
+#include <fstream>
+#include <climits>
+
+using namespace std;
+
+struct Haromszog {
+    int a;
+    int b;
+    int c;
+    int k;
+};
+
+bool perimeters(string fbe) {
+    ifstream fin(fbe);
+    if(!fin.is_open()){
+        return false;
+    }
+
+    int rowCounter = 0;
+    while(!fin.eof()){
+        string holder = "";
+        getline(fin, holder);
+        rowCounter++;
+    }
+    fin.close();
+
+    Haromszog* haromszog = new Haromszog[rowCounter];
+    
+    fin.open(fbe);
+    for(int i = 0; i < rowCounter; i++){
+        fin >> haromszog[i].a >>
+               haromszog[i].b >>
+               haromszog[i].c;
+
+        haromszog[i].k = haromszog[i].a + haromszog[i].b + haromszog[i].c;
+    }
+    fin.close();
+
+    for ( int i = 0; i < rowCounter; i++ ) {
+        cout << haromszog[i].k << endl;
+    }
+
+    
+
+  return true;
+}
+
+int main(){
+    if(not perimeters("haromszogek.txt")) std::cout << "I/O error.\n";
+    
+    
+    
+    return 0;
+}
+
+
