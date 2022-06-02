@@ -33,7 +33,7 @@ bool perimeters(string fbe) {
         return false;
     }
 
-    int rowCounter = 0;
+    int rowCounter = -1;
     while(!fin.eof()){
         string holder = "";
         getline(fin, holder);
@@ -69,5 +69,4 @@ int main(){
     
     return 0;
 }
-
 
